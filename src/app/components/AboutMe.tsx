@@ -4,22 +4,42 @@ import cornerstoneLogo from "figma:asset/baecd613e05765c7a5dc52a510b780033772c5e
 import senecaLogo from "figma:asset/6e901f481d48c258c00bb69fd8968f600fb7c0cd.png";
 import { Linkedin, Dribbble } from "lucide-react";
 
-const CORE_SKILLS = [
-  "User Research",
-  "Wireframing",
-  "UI Design",
-  "Prototyping",
-  "Design Systems",
-  "Interaction Design",
-  "Usability Testing",
-];
-
 const TOOLS = [
   "Figma",
   "FigJam",
-  "Adobe Creative Suite",
-  "Framer",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Jira",
+  "Confluence",
   "Miro",
+  "Notion",
+  "Maze",
+  "Google Analytics (GA4)",
+  "Hotjar",
+  "ChatGPT",
+  "Claude",
+];
+
+const CORE_SKILLS = [
+  "End-to-End Product Design",
+  "UX Research",
+  "User Interviews",
+  "Competitive Analysis",
+  "Information Architecture",
+  "User Flows",
+  "Wireframing",
+  "Interactive Prototyping",
+  "Visual Design",
+  "Design Systems",
+  "Accessibility (WCAG)",
+  "Usability Testing",
+  "Responsive Web & Mobile Design",
+  "Product Discovery",
+  "Cross-Functional Collaboration",
+  "Stakeholder Management",
+  "Design Handoff",
+  "Data-Informed Design",
+  "Agile (Scrum)",
 ];
 
 const EDUCATION = [
@@ -88,24 +108,24 @@ export default function AboutMe() {
         <div className="relative max-w-7xl mx-auto px-8">
           <h2 className="text-4xl text-gray-900 mb-16 text-center">Technical Skills</h2>
           <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {/* Core Skills */}
+            {/* Tools */}
             <div>
-              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Core Skills</h3>
-              <div className="flex flex-wrap gap-3">
-                {CORE_SKILLS.map((s) => (
-                  <div key={s} className="bg-white border-2 border-gray-200 rounded-full px-6 py-3 text-sm text-gray-700 transition-colors cursor-default hover:border-[#555B73] hover:text-[#555B73]">
-                    {s}
+              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {TOOLS.map((t) => (
+                  <div key={t} className="bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 text-sm text-gray-700 whitespace-nowrap cursor-default">
+                    {t}
                   </div>
                 ))}
               </div>
             </div>
-            {/* Tools */}
+            {/* Core Skills */}
             <div>
-              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Tools</h3>
-              <div className="flex flex-wrap gap-3">
-                {TOOLS.map((t) => (
-                  <div key={t} className="bg-white border-2 border-gray-200 rounded-full px-6 py-3 text-sm text-gray-700 transition-colors cursor-default hover:border-[#555B73] hover:text-[#555B73]">
-                    {t}
+              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Core Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {CORE_SKILLS.map((s) => (
+                  <div key={s} className="bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 text-sm text-gray-700 whitespace-nowrap cursor-default">
+                    {s}
                   </div>
                 ))}
               </div>

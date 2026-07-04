@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, useLocation } from "react-router";
 
 const NAV_ITEMS = [
   { label: "Home", to: "/" },
@@ -9,15 +9,6 @@ const NAV_ITEMS = [
 
 export default function Layout({ children }: { children: ReactNode }) {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    if (location.pathname === "/") {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/#contact");
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -49,13 +40,12 @@ export default function Layout({ children }: { children: ReactNode }) {
               >
                 Resume
               </button>
-              <button
-                type="button"
-                onClick={handleContactClick}
+              <a
+                href="mailto:contact@terenceattah.com"
                 className="text-sm text-gray-500 hover:text-gray-800 transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
               >
                 Contact
-              </button>
+              </a>
             </nav>
           </div>
           <button className="md:hidden text-gray-600 text-2xl" aria-label="Open menu">

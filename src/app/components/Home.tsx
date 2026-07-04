@@ -1,26 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import { Linkedin, Dribbble } from "lucide-react";
 import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.png";
 import profilePhoto from "figma:asset/5dddb5c4efac8f81d00f36917a5d34dbbc65c949.png";
 import { PROJECTS } from "../data/projects";
 
 export default function Home() {
-  const location = useLocation();
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-
-  useEffect(() => {
-    if (location.hash === "#contact") {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent! (This is a demo)");
-  };
-
   return (
     <>
       {/* ── HERO ── */}
@@ -105,49 +89,19 @@ export default function Home() {
         </div>
         <div className="relative max-w-md mx-auto px-6">
           <h2 className="text-xl text-white mb-1 text-center">Contact Me</h2>
-          <p className="text-center mb-4 text-xs" style={{ color: "#c9ccd6" }}>terenceattah@gmail.com</p>
-
-          <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-2">
-            <input
-              type="text"
-              placeholder="Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="px-3 py-1.5 rounded border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors text-xs"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="px-3 py-1.5 rounded border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors text-xs"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-              className="md:col-span-2 px-3 py-1.5 rounded border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors text-xs"
-              required
-            />
-            <textarea
-              placeholder="Type your message here..."
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={2}
-              className="md:col-span-2 px-3 py-1.5 rounded border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors resize-none text-xs"
-              required
-            />
-            <button
-              type="submit"
-              className="md:col-span-2 bg-white py-1.5 rounded hover:bg-gray-100 transition-colors text-xs"
+          <p className="text-center mb-4 text-xs" style={{ color: "#c9ccd6" }}>
+            Have a project or role in mind? Reach out.
+          </p>
+          <div className="flex flex-col items-center gap-3">
+            <a
+              href="mailto:contact@terenceattah.com"
+              className="inline-block bg-white py-1.5 px-6 rounded hover:bg-gray-100 transition-colors text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               style={{ fontWeight: 600, color: "#555B73" }}
             >
-              Submit
-            </button>
-          </form>
+              Email me
+            </a>
+            <p className="text-xs" style={{ color: "#c9ccd6" }}>contact@terenceattah.com</p>
+          </div>
         </div>
       </section>
 

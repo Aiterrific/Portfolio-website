@@ -1,9 +1,14 @@
-import type { ReactNode } from "react";
 import { Link } from "react-router";
-import { PROJECTS } from "../data/projects";
-import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT, CASE_STUDY_HEADING_LABEL } from "../data/caseStudyStyles";
-
-const OTHER_PROJECTS = PROJECTS.filter((project) => project.title !== "CoFundEstate");
+import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles";
+import {
+  CaseStudyNav,
+  ImageBlock,
+  SectionHeading,
+  Section,
+  Lead,
+  PrototypeCTA,
+  ExploreCaseStudies,
+} from "./CaseStudyShared";
 
 const STATS = [
   { value: "45%", label: "Task success improvement" },
@@ -12,97 +17,10 @@ const STATS = [
   { value: "200+", label: "Users onboarded in six weeks" },
 ];
 
-function PlaceholderBox({ label, wide = false }: { label: string; wide?: boolean }) {
-  return (
-    <div
-      role="img"
-      aria-label={`Placeholder image: ${label}`}
-      className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-gray-200 border border-gray-300 rounded-md flex items-center justify-center px-6`}
-    >
-      <span className="text-xs md:text-sm uppercase tracking-wide text-gray-600 text-center">
-        {label}
-      </span>
-    </div>
-  );
-}
-
-function ImageBlock({ label, wide = false }: { label: string; wide?: boolean }) {
-  return (
-    <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-      <div
-        role="img"
-        aria-label={`Placeholder image: ${label}`}
-        className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-gray-200 border border-gray-300 rounded-md`}
-      />
-      <figcaption className="mt-3 text-xs md:text-sm uppercase tracking-wide text-gray-600 text-center">
-        {label}
-      </figcaption>
-    </figure>
-  );
-}
-
-function SectionHeading({ number, children }: { number: string; children: ReactNode }) {
-  return (
-    <h2 className="flex items-baseline gap-3 mb-6">
-      <span className="text-xs tracking-[0.2em] text-gray-400 font-heading" aria-hidden="true">
-        {number}
-      </span>
-      <span className={CASE_STUDY_HEADING_LABEL}>{children}</span>
-    </h2>
-  );
-}
-
-function Section({
-  number,
-  title,
-  children,
-  image,
-}: {
-  number: string;
-  title: string;
-  children: ReactNode;
-  image?: { label: string; wide?: boolean };
-}) {
-  return (
-    <section className="py-12 md:py-16 border-t border-gray-100 first:border-t-0 first:pt-0">
-      <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-        <SectionHeading number={number}>{title}</SectionHeading>
-        <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>
-      </div>
-      {image && <ImageBlock label={image.label} wide={image.wide} />}
-    </section>
-  );
-}
-
-function Lead({ lead, children }: { lead: string; children: ReactNode }) {
-  return (
-    <p>
-      <strong className="text-gray-900">{lead}</strong> {children}
-    </p>
-  );
-}
-
 export default function CoFundEstateCaseStudy() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* ── MINIMAL NAV ── */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 h-16 flex items-center justify-between`}>
-          <Link
-            to="/"
-            className="text-sm tracking-[0.2em] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
-            style={{ fontWeight: 700 }}
-          >
-            TERENCE
-          </Link>
-          <Link
-            to="/"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
-          >
-            ← Back
-          </Link>
-        </div>
-      </header>
+      <CaseStudyNav />
 
       {/* ── HERO ── */}
       <section className="pt-16 pb-0 md:pt-24">
@@ -500,36 +418,9 @@ export default function CoFundEstateCaseStudy() {
         </Lead>
       </Section>
 
-      {/* ── CLOSING CTA ── */}
-      <section className="py-16 md:py-20 border-t border-gray-100 text-center">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <h2 className="text-2xl md:text-3xl mb-6">View the prototype</h2>
-          <button
-            type="button"
-            disabled
-            aria-disabled="true"
-            className="inline-flex items-center justify-center rounded-md bg-gray-200 text-gray-500 px-8 py-3 text-sm font-medium cursor-not-allowed"
-          >
-            Coming soon
-          </button>
-        </div>
-      </section>
+      <PrototypeCTA buttonLabel="Coming soon" />
 
-      {/* ── EXPLORE CASE STUDIES ── */}
-      <section className="py-12 md:py-16 border-t border-gray-100">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="14">Explore Case Studies</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
-            {OTHER_PROJECTS.map((project) => (
-              <div key={project.id} className="flex flex-col cursor-default">
-                <PlaceholderBox label={project.title} />
-                <h3 className="mt-4 text-base md:text-lg text-gray-900">{project.title}</h3>
-                <p className="justify-body mt-1 text-sm text-gray-600 leading-relaxed">{project.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ExploreCaseStudies currentTitle="CoFundEstate" />
 
       {/* ── FOOTER ── */}
       <footer className="border-t border-gray-100 py-12">

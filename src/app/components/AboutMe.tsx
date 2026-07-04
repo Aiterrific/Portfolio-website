@@ -49,10 +49,10 @@ export default function AboutMe() {
                 Product Designer with 4 years of experience solving complex problems across fintech, SaaS and e-commerce. I design with a problem-first mindset, using deep Figma expertise to take products from research to high-fidelity UI and dev handoff.
               </p>
               <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
-                At Batchly, I led end-to-end design of a B2B e-commerce platform, redesigning the dashboard, product discovery and checkout experience to reduce friction for bulk ordering. That work improved task success by 35% and increased supplier visibility across the platform.
+                At Batchly, I designed a B2B bulk purchasing platform end to end as an individual project: research, information architecture, UI design, prototyping and walkthrough testing. The buyer-side experience covered supplier comparison, a trust-forward checkout and a reorder-first workflow, with an AI reorder recommendation designed as a concept feature.
               </p>
               <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
-                At PostPilot, I redesigned the core dashboard and scheduling workflows, simplifying multi-account management and team collaboration. The result was a 50% reduction in time to publish and a 40% improvement in feature discoverability.
+                At PostPilot, I designed the messaging experience for a team-built social media management concept, consolidating conversations from multiple platforms into one inbox with in-place replies. The work ran inside a shared style guide across a multi-designer team, from flows through high-fidelity screens.
               </p>
               <p className="justify-body text-gray-700 text-lg leading-relaxed">
                 I bring the same approach to every engagement: understand the system, identify where users struggle and design solutions that work for both the user and the business. I am actively seeking full-time Product Design roles.

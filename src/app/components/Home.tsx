@@ -16,7 +16,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Left Column */}
             <div>
-              <h1 className="text-6xl md:text-7xl leading-[0.9] mb-8">
+              <h1 className="font-serif font-normal text-6xl md:text-7xl leading-[0.9] mb-8">
                 DIGITAL PRODUCT<br />DESIGNER
               </h1>
               <p className="justify-body text-gray-600 text-lg leading-relaxed max-w-lg">
@@ -40,7 +40,7 @@ export default function Home() {
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="text-4xl text-gray-900 mb-16 text-center">Case Studies</h2>
+          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-16 text-center">Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {PROJECTS.map((project) => {
               const cardContent = (

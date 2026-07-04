@@ -29,7 +29,7 @@ export default function CoFundEstateCaseStudy() {
             <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-gray-500 font-heading mb-4">
               Case Study
             </p>
-            <h1 className="text-3xl md:text-5xl leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl leading-tight mb-6">
               CoFundEstate: Lowering the Barrier to Real Estate Investment
             </h1>
             <p className={`justify-body ${CASE_STUDY_BODY_TEXT}`}>

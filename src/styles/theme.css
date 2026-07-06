@@ -203,3 +203,24 @@
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+
+/* Shared card elevation, navy-tinted and low opacity. */
+:root {
+  --shadow-card: 0 8px 24px -8px rgba(46, 54, 84, 0.16), 0 2px 8px -4px rgba(46, 54, 84, 0.1);
+  --shadow-card-hover: 0 16px 36px -12px rgba(46, 54, 84, 0.24), 0 6px 14px -6px rgba(46, 54, 84, 0.14);
+}
+
+/* Static elevated surface: metadata cards, TL;DR card. No motion, no hover. */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+/* Interactive card lift: linked project and case-study cards only. */
+.card-lift {
+  box-shadow: var(--shadow-card);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}

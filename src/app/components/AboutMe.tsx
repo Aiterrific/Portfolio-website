@@ -64,7 +64,7 @@ export default function AboutMe() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row gap-16 items-start max-w-5xl mx-auto">
             <div className="flex-1 order-2 md:order-1">
-              <h2 className="font-serif font-normal text-4xl text-gray-900 mb-8">About Me</h2>
+              <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10">About Me</h2>
               <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
                 Product Designer with 4 years of experience solving complex problems across fintech, SaaS and e-commerce. I design with a problem-first mindset, using deep Figma expertise to take products from research to high-fidelity UI and dev handoff.
               </p>
@@ -106,7 +106,7 @@ export default function AboutMe() {
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-16 text-center">Technical Skills</h2>
+          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Technical Skills</h2>
           <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
             {/* Tools */}
             <div>
@@ -137,10 +137,10 @@ export default function AboutMe() {
       {/* ── EDUCATION ── */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Education</h2>
+          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-6 text-center">Education</h2>
           <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {EDUCATION.map((e) => (
-              <div key={e.school} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 hover:shadow-md transition-all flex items-center gap-4 hover:border-[#555B73]">
+              <div key={e.school} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 hover:shadow-md transition-[box-shadow,border-color] duration-200 flex items-center gap-4 hover:border-[#555B73]">
                 <div className="flex-shrink-0 w-16 h-16 bg-white rounded-lg border border-gray-200 flex items-center justify-center overflow-hidden p-1">
                   <img src={e.logo} alt={e.school} className="w-full h-full object-contain" />
                 </div>
@@ -162,10 +162,10 @@ export default function AboutMe() {
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-16 text-center">Certifications</h2>
+          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Certifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {CERTIFICATIONS.map((c) => (
-              <div key={c.title} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all hover:border-[#555B73]">
+              <div key={c.title} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-[box-shadow,border-color] duration-200 hover:border-[#555B73]">
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-xs rounded-full px-3 py-1" style={{ backgroundColor: "#e8e9ed", color: "#555B73" }}>{c.issuer}</span>
                   <span className="text-xs text-gray-400">{c.date}</span>
@@ -189,7 +189,7 @@ export default function AboutMe() {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -198,7 +198,7 @@ export default function AboutMe() {
                 href="https://behance.net" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Behance"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -209,7 +209,7 @@ export default function AboutMe() {
                 href="https://dribbble.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />

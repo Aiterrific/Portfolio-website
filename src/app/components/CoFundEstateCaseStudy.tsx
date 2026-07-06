@@ -39,7 +39,7 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </div>
 
-          <div className="border border-gray-300 rounded-lg p-6">
+          <div className="shadow-card border border-gray-300 rounded-lg p-6">
             <dl className="space-y-5">
               <div>
                 <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Industry</dt>
@@ -66,7 +66,7 @@ export default function CoFundEstateCaseStudy() {
 
       {/* ── TL;DR ── */}
       <section className="pt-12 md:pt-16">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto border border-gray-300 rounded-lg p-6 md:p-8`}>
+        <div className={`shadow-card ${CASE_STUDY_WIDTH} mx-auto border border-gray-300 rounded-lg p-6 md:p-8`}>
           <p className="text-xs tracking-[0.2em] uppercase text-gray-500 font-heading mb-4">TL;DR</p>
           <div className={`justify-body space-y-3 ${CASE_STUDY_BODY_TEXT}`}>
             <p>

@@ -33,7 +33,7 @@ export default function BatchlyCaseStudy() {
             </p>
           </div>
 
-          <div className="border border-gray-300 rounded-lg p-6">
+          <div className="shadow-card border border-gray-300 rounded-lg p-6">
             <dl className="space-y-5">
               <div>
                 <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Industry</dt>

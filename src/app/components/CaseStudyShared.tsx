@@ -9,7 +9,7 @@ export function CaseStudyNav() {
       <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 h-16 flex items-center justify-between`}>
         <Link
           to="/"
-          className="text-sm tracking-[0.2em] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+          className="text-sm tracking-[0.2em] transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
           style={{ fontWeight: 700 }}
         >
           TERENCE
@@ -30,9 +30,9 @@ export function PlaceholderBox({ label, wide = false }: { label: string; wide?: 
     <div
       role="img"
       aria-label={`Placeholder image: ${label}`}
-      className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-gray-200 border border-gray-300 rounded-md flex items-center justify-center px-6`}
+      className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-stone-200 border border-stone-300 rounded-md flex items-center justify-center px-6`}
     >
-      <span className="text-xs md:text-sm uppercase tracking-wide text-gray-600 text-center">
+      <span className="text-xs md:text-sm uppercase tracking-wide text-stone-600 text-center">
         {label}
       </span>
     </div>
@@ -45,9 +45,9 @@ export function ImageBlock({ label, wide = false }: { label: string; wide?: bool
       <div
         role="img"
         aria-label={`Placeholder image: ${label}`}
-        className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-gray-200 border border-gray-300 rounded-md`}
+        className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-stone-200 border border-stone-300 rounded-md`}
       />
-      <figcaption className="mt-3 text-xs md:text-sm uppercase tracking-wide text-gray-600 text-center">
+      <figcaption className="mt-3 text-xs md:text-sm uppercase tracking-wide text-stone-600 text-center">
         {label}
       </figcaption>
     </figure>
@@ -56,7 +56,7 @@ export function ImageBlock({ label, wide = false }: { label: string; wide?: bool
 
 export function SectionHeading({ number, children }: { number: string; children: ReactNode }) {
   return (
-    <h2 className="flex items-baseline gap-3 mb-6">
+    <h2 className="flex items-baseline gap-3 mb-6 md:mb-8">
       <span className="text-xs tracking-[0.2em] text-gray-400 font-heading" aria-hidden="true">
         {number}
       </span>
@@ -135,7 +135,7 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
                 <Link
                   key={project.id}
                   to={project.path}
-                  className="flex flex-col cursor-pointer rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                  className="flex flex-col cursor-pointer rounded transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
                 >
                   {cardContent}
                 </Link>

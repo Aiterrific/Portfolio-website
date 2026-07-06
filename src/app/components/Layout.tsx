@@ -16,7 +16,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-16">
-            <Link to="/" className="tracking-[0.2em] text-xl" style={{ fontWeight: 700 }}>
+            <Link
+              to="/"
+              className="tracking-[0.2em] text-xl transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+              style={{ fontWeight: 700 }}
+            >
               TERENCE
             </Link>
             <nav className="hidden md:flex gap-10">

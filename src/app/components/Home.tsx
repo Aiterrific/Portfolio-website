@@ -40,7 +40,7 @@ export default function Home() {
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-16 text-center">Case Studies</h2>
+          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {PROJECTS.map((project) => {
               const cardContent = (
@@ -49,7 +49,7 @@ export default function Home() {
                     <img
                       src={project.img}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -65,7 +65,7 @@ export default function Home() {
                   <Link
                     key={project.id}
                     to={project.path}
-                    className="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                    className="card-lift block bg-white rounded-2xl overflow-hidden group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
                   >
                     {cardContent}
                   </Link>
@@ -73,7 +73,7 @@ export default function Home() {
               }
 
               return (
-                <div key={project.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group cursor-default">
+                <div key={project.id} className="shadow-card bg-white rounded-2xl overflow-hidden group cursor-default">
                   {cardContent}
                 </div>
               );
@@ -117,7 +117,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/terenceattah/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -126,7 +126,7 @@ export default function Home() {
                 href="https://behance.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Behance"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -137,7 +137,7 @@ export default function Home() {
                 href="https://dribbble.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />

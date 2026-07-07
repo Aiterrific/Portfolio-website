@@ -12,17 +12,17 @@ import {
 
 export default function ConnectLocalyCaseStudy() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-charcoal">
       <CaseStudyNav />
 
       {/* ── HERO ── */}
       <section className="pt-16 pb-0 md:pt-24">
         <div className={`${CASE_STUDY_WIDTH} mx-auto grid md:grid-cols-[1fr_320px] gap-10 md:gap-16 items-start`}>
           <div className={CASE_STUDY_WIDTH}>
-            <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-gray-500 font-heading mb-4">
+            <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-muted-text font-heading mb-4">
               Case Study
             </p>
-            <h1 className="text-3xl md:text-4xl leading-tight mb-6">
+            <h1 className="text-navy text-3xl md:text-4xl leading-tight mb-6">
               ConnectLocaly: Connecting Communities to Trusted Local Businesses
             </h1>
             <p className={`justify-body ${CASE_STUDY_BODY_TEXT}`}>
@@ -32,23 +32,23 @@ export default function ConnectLocalyCaseStudy() {
             </p>
           </div>
 
-          <div className="shadow-card border border-gray-300 rounded-lg p-6">
+          <div className="shadow-card border border-line rounded-lg p-6">
             <dl className="space-y-5">
               <div>
-                <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Industry</dt>
-                <dd className="text-gray-900">Local services and community platforms</dd>
+                <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Industry</dt>
+                <dd className="text-charcoal">Local services and community platforms</dd>
               </div>
               <div>
-                <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Stage</dt>
-                <dd className="text-gray-900">Concept-stage validation project</dd>
+                <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Stage</dt>
+                <dd className="text-charcoal">Concept-stage validation project</dd>
               </div>
               <div>
-                <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Duration</dt>
-                <dd className="text-gray-900">July 2023 to September 2023</dd>
+                <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Duration</dt>
+                <dd className="text-charcoal">July 2023 to September 2023</dd>
               </div>
               <div>
-                <dt className="text-xs tracking-wide uppercase text-gray-500 mb-1 font-heading">Role</dt>
-                <dd className="text-gray-900">Product Designer (UI/UX)</dd>
+                <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Role</dt>
+                <dd className="text-charcoal">Product Designer (UI/UX)</dd>
               </div>
             </dl>
           </div>
@@ -225,7 +225,7 @@ export default function ConnectLocalyCaseStudy() {
       </Section>
 
       {/* ── 09 DESIGN DECISIONS ── */}
-      <section className="py-12 md:py-16 border-t border-gray-100">
+      <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
           <SectionHeading number="09">Design Decisions</SectionHeading>
           <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>
@@ -336,11 +336,11 @@ export default function ConnectLocalyCaseStudy() {
       <ExploreCaseStudies currentTitle="ConnectLocaly" />
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-gray-100 py-12">
+      <footer className="border-t border-line py-12">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
           <Link
             to="/"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+            className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
           >
             ← Back to portfolio
           </Link>

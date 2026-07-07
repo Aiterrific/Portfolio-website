@@ -42,6 +42,17 @@
   --app-font-body: "Inter", system-ui, sans-serif;
   --app-font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
   --app-font-display-serif: "Instrument Serif", serif;
+
+  /* Portfolio design tokens: navy-forward palette with a gold accent. */
+  --navy: #00334E;
+  --navy-hover: #00263B;
+  --teal: #005B5E;
+  --gold: #C89A4B;
+  --band: #F7F8FA;
+  --surface: #EEF1F6;
+  --line: #D8DEE8;
+  --charcoal: #1E2430;
+  --muted-text: #5A6572;
 }
 
 .dark {
@@ -123,6 +134,16 @@
   --font-sans: var(--app-font-body);
   --font-heading: var(--app-font-heading);
   --font-serif: var(--app-font-display-serif);
+
+  --color-navy: var(--navy);
+  --color-navy-hover: var(--navy-hover);
+  --color-teal: var(--teal);
+  --color-gold: var(--gold);
+  --color-band: var(--band);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-charcoal: var(--charcoal);
+  --color-muted-text: var(--muted-text);
 }
 
 @layer base {
@@ -204,10 +225,10 @@
   hyphens: auto;
 }
 
-/* Shared card elevation, navy-tinted and low opacity. */
+/* Shared card elevation, tinted with the primary navy token and low opacity. */
 :root {
-  --shadow-card: 0 8px 24px -8px rgba(46, 54, 84, 0.16), 0 2px 8px -4px rgba(46, 54, 84, 0.1);
-  --shadow-card-hover: 0 16px 36px -12px rgba(46, 54, 84, 0.24), 0 6px 14px -6px rgba(46, 54, 84, 0.14);
+  --shadow-card: 0 8px 24px -8px rgba(0, 51, 78, 0.16), 0 2px 8px -4px rgba(0, 51, 78, 0.1);
+  --shadow-card-hover: 0 16px 36px -12px rgba(0, 51, 78, 0.24), 0 6px 14px -6px rgba(0, 51, 78, 0.14);
 }
 
 /* Static elevated surface: metadata cards, TL;DR card. No motion, no hover. */
@@ -223,4 +244,36 @@
 .card-lift:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card-hover);
+}
+
+/*
+ * Work row hover-reveal description. Collapsed by default only on devices that
+ * truly support hover; always expanded on touch so nothing hides on mobile.
+ */
+.work-desc {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease, opacity 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-row:hover .work-desc,
+  .work-row:focus-within .work-desc {
+    max-height: 120px;
+    opacity: 1;
+  }
+}
+
+@media not all and (hover: hover) {
+  .work-desc {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+  }
+}
+
+.work-row:hover .work-row-zoom,
+.work-row:focus-within .work-row-zoom {
+  transform: scale(1.05);
 }

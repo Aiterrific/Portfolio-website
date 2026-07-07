@@ -64,17 +64,17 @@ export default function AboutMe() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row gap-16 items-start max-w-5xl mx-auto">
             <div className="flex-1 order-2 md:order-1">
-              <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10">About Me</h2>
-              <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
+              <h2 className="font-serif font-normal text-4xl text-navy mb-10">About Me</h2>
+              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
                 Product Designer with 4 years of experience solving complex problems across fintech, SaaS and e-commerce. I design with a problem-first mindset, using deep Figma expertise to take products from research to high-fidelity UI and dev handoff.
               </p>
-              <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
+              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
                 At Batchly, I designed a B2B bulk purchasing platform end to end as an individual project: research, information architecture, UI design, prototyping and walkthrough testing. The buyer-side experience covered supplier comparison, a trust-forward checkout and a reorder-first workflow, with an AI reorder recommendation designed as a concept feature.
               </p>
-              <p className="justify-body text-gray-700 text-lg leading-relaxed mb-6">
+              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
                 At PostPilot, I designed the messaging experience for a team-built social media management concept, consolidating conversations from multiple platforms into one inbox with in-place replies. The work ran inside a shared style guide across a multi-designer team, from flows through high-fidelity screens.
               </p>
-              <p className="justify-body text-gray-700 text-lg leading-relaxed">
+              <p className="justify-body text-charcoal text-lg leading-relaxed">
                 I bring the same approach to every engagement: understand the system, identify where users struggle and design solutions that work for both the user and the business. I am actively seeking full-time Product Design roles.
               </p>
 
@@ -86,14 +86,14 @@ export default function AboutMe() {
                   { icon: "🛠️", label: "Design Systems Builder (Scalable UI Libraries)" },
                   { icon: "♿", label: "Accessibility Advocate (WCAG 2.1 / AODA)" },
                 ].map((a) => (
-                  <div key={a.label} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors">
+                  <div key={a.label} className="bg-surface rounded-lg p-6 text-center hover:bg-band transition-colors">
                     <div className="text-4xl mb-3">{a.icon}</div>
-                    <div className="text-sm text-gray-600 leading-tight">{a.label}</div>
+                    <div className="text-sm text-muted-text leading-tight">{a.label}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-8 border-gray-100 shadow-xl order-1 md:order-2">
+            <div className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-8 border-line shadow-xl order-1 md:order-2">
               <img src={profilePhoto} alt="Terence" className="w-full h-full object-cover object-[center_15%]" />
             </div>
           </div>
@@ -101,19 +101,19 @@ export default function AboutMe() {
       </section>
 
       {/* ── TECHNICAL SKILLS ── */}
-      <section className="py-20 bg-gray-50 relative overflow-hidden">
+      <section className="py-20 bg-band relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Technical Skills</h2>
+          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">Technical Skills</h2>
           <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
             {/* Tools */}
             <div>
-              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Tools</h3>
+              <h3 className="text-xs tracking-[0.2em] text-muted-text mb-6 uppercase">Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {TOOLS.map((t) => (
-                  <div key={t} className="bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 text-sm text-gray-700 whitespace-nowrap cursor-default">
+                  <div key={t} className="bg-surface border border-line rounded-full px-3 py-1.5 text-sm text-charcoal whitespace-nowrap cursor-default">
                     {t}
                   </div>
                 ))}
@@ -121,10 +121,10 @@ export default function AboutMe() {
             </div>
             {/* Core Skills */}
             <div>
-              <h3 className="text-xs tracking-[0.2em] text-gray-400 mb-6 uppercase">Core Skills</h3>
+              <h3 className="text-xs tracking-[0.2em] text-muted-text mb-6 uppercase">Core Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {CORE_SKILLS.map((s) => (
-                  <div key={s} className="bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 text-sm text-gray-700 whitespace-nowrap cursor-default">
+                  <div key={s} className="bg-surface border border-line rounded-full px-3 py-1.5 text-sm text-charcoal whitespace-nowrap cursor-default">
                     {s}
                   </div>
                 ))}
@@ -137,18 +137,18 @@ export default function AboutMe() {
       {/* ── EDUCATION ── */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-6 text-center">Education</h2>
+          <h2 className="font-serif font-normal text-4xl text-navy mb-6 text-center">Education</h2>
           <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {EDUCATION.map((e) => (
-              <div key={e.school} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 hover:shadow-md transition-[box-shadow,border-color] duration-200 flex items-center gap-4 hover:border-[#555B73]">
-                <div className="flex-shrink-0 w-16 h-16 bg-white rounded-lg border border-gray-200 flex items-center justify-center overflow-hidden p-1">
+              <div key={e.school} className="bg-surface border-2 border-line rounded-xl p-5 hover:shadow-md transition-[box-shadow,border-color] duration-200 flex items-center gap-4 hover:border-navy">
+                <div className="flex-shrink-0 w-16 h-16 bg-white rounded-lg border border-line flex items-center justify-center overflow-hidden p-1">
                   <img src={e.logo} alt={e.school} className="w-full h-full object-contain" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm text-gray-900 mb-0.5 truncate" style={{ fontWeight: 600 }}>{e.school}</p>
-                  <p className="text-xs text-gray-500 mb-1">{e.location}</p>
-                  <p className="text-xs text-gray-700 leading-snug">{e.program}</p>
-                  <p className="text-xs text-gray-400 mt-1">{e.year}</p>
+                  <p className="text-sm text-charcoal mb-0.5 truncate" style={{ fontWeight: 600 }}>{e.school}</p>
+                  <p className="text-xs text-muted-text mb-1">{e.location}</p>
+                  <p className="text-xs text-charcoal leading-snug">{e.program}</p>
+                  <p className="text-xs text-muted-text mt-1">{e.year}</p>
                 </div>
               </div>
             ))}
@@ -157,20 +157,20 @@ export default function AboutMe() {
       </section>
 
       {/* ── CERTIFICATIONS ── */}
-      <section className="py-20 bg-gray-50 relative overflow-hidden">
+      <section className="py-20 bg-band relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Certifications</h2>
+          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">Certifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {CERTIFICATIONS.map((c) => (
-              <div key={c.title} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-[box-shadow,border-color] duration-200 hover:border-[#555B73]">
+              <div key={c.title} className="bg-white border-2 border-line rounded-xl p-6 hover:shadow-lg transition-[box-shadow,border-color] duration-200 hover:border-navy">
                 <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs rounded-full px-3 py-1" style={{ backgroundColor: "#e8e9ed", color: "#555B73" }}>{c.issuer}</span>
-                  <span className="text-xs text-gray-400">{c.date}</span>
+                  <span className="text-xs rounded-full px-3 py-1 bg-surface text-navy">{c.issuer}</span>
+                  <span className="text-xs text-muted-text">{c.date}</span>
                 </div>
-                <p className="text-gray-900" style={{ fontWeight: 600 }}>{c.title}</p>
+                <p className="text-charcoal" style={{ fontWeight: 600 }}>{c.title}</p>
               </div>
             ))}
           </div>
@@ -189,7 +189,7 @@ export default function AboutMe() {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -198,7 +198,7 @@ export default function AboutMe() {
                 href="https://behance.net" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Behance"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -209,7 +209,7 @@ export default function AboutMe() {
                 href="https://dribbble.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />

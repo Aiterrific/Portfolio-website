@@ -10,14 +10,7 @@ import PostPilotCaseStudy from "./components/PostPilotCaseStudy";
 export default function App() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <Layout>
-            <Home />
-          </Layout>
-        }
-      />
+      <Route path="/" element={<Home />} />
       <Route
         path="/about"
         element={

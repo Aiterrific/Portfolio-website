@@ -5,18 +5,18 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT, CASE_STUDY_HEADING_LABEL } from
 
 export function CaseStudyNav() {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
       <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 h-16 flex items-center justify-between`}>
         <Link
           to="/"
-          className="text-sm tracking-[0.2em] transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+          className="text-charcoal text-sm tracking-[0.2em] transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
           style={{ fontWeight: 700 }}
         >
           TERENCE
         </Link>
         <Link
           to="/"
-          className="text-sm text-gray-500 hover:text-gray-900 transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+          className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
         >
           ← Back
         </Link>
@@ -57,7 +57,7 @@ export function ImageBlock({ label, wide = false }: { label: string; wide?: bool
 export function SectionHeading({ number, children }: { number: string; children: ReactNode }) {
   return (
     <h2 className="flex items-baseline gap-3 mb-6 md:mb-8">
-      <span className="text-xs tracking-[0.2em] text-gray-400 font-heading" aria-hidden="true">
+      <span className="text-xs tracking-[0.2em] text-muted-text font-heading" aria-hidden="true">
         {number}
       </span>
       <span className={CASE_STUDY_HEADING_LABEL}>{children}</span>
@@ -77,7 +77,7 @@ export function Section({
   image?: { label: string; wide?: boolean };
 }) {
   return (
-    <section className="py-12 md:py-16 border-t border-gray-100 first:border-t-0 first:pt-0">
+    <section className="py-12 md:py-16 border-t border-line first:border-t-0 first:pt-0">
       <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
         <SectionHeading number={number}>{title}</SectionHeading>
         <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>
@@ -90,21 +90,21 @@ export function Section({
 export function Lead({ lead, children }: { lead: string; children: ReactNode }) {
   return (
     <p>
-      <strong className="text-gray-900">{lead}</strong> {children}
+      <strong className="text-charcoal">{lead}</strong> {children}
     </p>
   );
 }
 
 export function PrototypeCTA({ buttonLabel = "Coming soon" }: { buttonLabel?: string }) {
   return (
-    <section className="py-16 md:py-20 border-t border-gray-100 text-center">
+    <section className="py-16 md:py-20 border-t border-line text-center">
       <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
         <h2 className="text-2xl md:text-3xl mb-6">View the prototype</h2>
         <button
           type="button"
           disabled
           aria-disabled="true"
-          className="inline-flex items-center justify-center rounded-md bg-gray-200 text-gray-500 px-8 py-3 text-sm font-medium cursor-not-allowed"
+          className="inline-flex items-center justify-center rounded-md bg-surface text-muted-text px-8 py-3 text-sm font-medium cursor-not-allowed"
         >
           {buttonLabel}
         </button>
@@ -117,7 +117,7 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
   const otherProjects = PROJECTS.filter((project) => project.title !== currentTitle);
 
   return (
-    <section className="py-12 md:py-16 border-t border-gray-100">
+    <section className="py-12 md:py-16 border-t border-line">
       <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
         <SectionHeading number="14">Explore Case Studies</SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
@@ -125,8 +125,8 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
             const cardContent = (
               <>
                 <PlaceholderBox label={project.title} />
-                <h3 className="mt-4 text-base md:text-lg text-gray-900">{project.title}</h3>
-                <p className="justify-body mt-1 text-sm text-gray-600 leading-relaxed">{project.desc}</p>
+                <h3 className="mt-4 text-base md:text-lg text-charcoal">{project.title}</h3>
+                <p className="justify-body mt-1 text-sm text-charcoal leading-relaxed">{project.desc}</p>
               </>
             );
 
@@ -135,7 +135,7 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
                 <Link
                   key={project.id}
                   to={project.path}
-                  className="flex flex-col cursor-pointer rounded transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                  className="flex flex-col cursor-pointer rounded-lg transition-transform duration-200 hover:-translate-y-0.5 hover:ring-1 hover:ring-gold hover:ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   {cardContent}
                 </Link>

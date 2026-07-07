@@ -4,9 +4,101 @@ import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.pn
 import profilePhoto from "figma:asset/5dddb5c4efac8f81d00f36917a5d34dbbc65c949.png";
 import { PROJECTS } from "../data/projects";
 
+const SELECTED_WORK = [
+  {
+    title: "CoFundEstate",
+    outcome: "Turned a high-barrier investment process into a guided flow that first-time investors could finish with confidence.",
+    tags: ["Fintech", "Proptech"],
+    description: "CoFundEstate is a web-based crowdfunding platform built to make fractional real estate investing understandable for first-time investors. I led end-to-end product design on an early-stage validation MVP, from research through developer handoff.",
+  },
+  {
+    title: "ConnectLocaly",
+    outcome: "Made a two-sided local marketplace usable when no real inventory existed yet, using structure over browsing.",
+    tags: ["Local Services", "Community"],
+    description: "ConnectLocaly is a two-sided platform concept linking community members with local businesses. I led end-to-end product design for a startup initiative at SkillHat, from research framing through prototyping, walkthrough testing and feasibility handoff.",
+  },
+  {
+    title: "Batchly",
+    outcome: "Streamlined bulk purchasing for small business buyers by designing trust into every checkout and reorder.",
+    tags: ["B2B", "E-commerce"],
+    description: "Batchly is a B2B bulk purchasing platform concept for small e-commerce business owners who order inventory from wholesale suppliers. I owned the end-to-end design as an individual course project at BrainStation, from research through information architecture, UI design, prototyping and walkthrough testing.",
+  },
+  {
+    title: "PostPilot",
+    outcome: "Unified fragmented social conversations into one inbox as part of a multi-designer product team.",
+    tags: ["SaaS", "Social Media"],
+    description: "PostPilot is a social media management tool concept for scheduling posts, tracking performance and handling conversations across platforms. A design team at the Dev and Design bootcamp built the full product.",
+  },
+];
+
+const SERVICES = [
+  {
+    number: "01",
+    heading: "Product & UX Design",
+    description: "End-to-end design from research to handoff for complex, data-heavy products.",
+    chips: ["End-to-End Product Design", "Visual Design", "Design Handoff"],
+  },
+  {
+    number: "02",
+    heading: "UX Research & Testing",
+    description: "Interviews, usability walkthroughs and synthesis that ground decisions in evidence.",
+    chips: ["UX Research", "User Interviews", "Usability Testing"],
+  },
+  {
+    number: "03",
+    heading: "Design Systems & Accessibility",
+    description: "Reusable components and WCAG-aware patterns that scale across a product.",
+    chips: ["Design Systems", "Accessibility (WCAG)", "Responsive Web & Mobile Design"],
+  },
+  {
+    number: "04",
+    heading: "Product Thinking",
+    description: "Shaping the logic behind the experience, not only the interface.",
+    chips: ["Product Discovery", "Data-Informed Design", "Stakeholder Management"],
+  },
+];
+
 export default function Home() {
+  const scrollToWork = () => {
+    document.getElementById("selected-work")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
+    <div className="min-h-screen bg-white text-charcoal">
+      {/* ── NAV ── */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-20 flex items-center justify-between">
+          <Link
+            to="/"
+            className="text-charcoal tracking-[0.2em] text-xl transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            style={{ fontWeight: 700 }}
+          >
+            TERENCE
+          </Link>
+          <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
+            <Link
+              to="/about"
+              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              About
+            </Link>
+            <button
+              type="button"
+              onClick={scrollToWork}
+              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              Work
+            </button>
+            <a
+              href="mailto:contact@terenceattah.com"
+              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              Contact
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* ── HERO ── */}
       <section className="relative bg-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
@@ -16,12 +108,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Left Column */}
             <div>
-              <h1 className="font-serif font-normal text-6xl md:text-7xl leading-[0.9] mb-8">
-                DIGITAL PRODUCT<br />DESIGNER
+              <h1 className="font-serif font-normal text-4xl md:text-5xl leading-tight mb-4 text-navy">
+                I turn complex systems into products people actually understand.
               </h1>
-              <p className="justify-body text-gray-600 text-lg leading-relaxed max-w-lg">
-                Product Designer crafting intuitive, high-impact digital experiences across web and mobile platforms. I turn complex, data-heavy systems into clear, scalable products that people actually enjoy using.
+              <p className="text-lg md:text-xl text-muted-text leading-relaxed mb-8 max-w-lg">
+                Product designer working across digital platforms. I like a good challenge.
               </p>
+              <button
+                type="button"
+                onClick={scrollToWork}
+                className="inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-medium text-white bg-navy ring-1 ring-gold transition-colors duration-200 hover:bg-navy-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
+                See My Work
+              </button>
             </div>
 
             {/* Right Column - Profile Photo */}
@@ -34,30 +133,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJECTS ── */}
-      <section className="py-20 bg-gray-50 relative overflow-hidden" id="projects">
+      {/* ── SELECTED WORK ── */}
+      <section className="py-20 bg-band relative overflow-hidden" id="selected-work">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-gray-900 mb-10 text-center">Case Studies</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {PROJECTS.map((project) => {
-              const cardContent = (
-                <>
-                  <div className="h-80 overflow-hidden relative">
+          <h2 className="text-4xl text-navy mb-3 text-center">Selected Work</h2>
+          <p className="text-muted-text text-center mb-10">A few problems worth solving.</p>
+          <div className="flex flex-col gap-12 md:gap-16">
+            {SELECTED_WORK.map((item, index) => {
+              const project = PROJECTS.find((p) => p.title === item.title);
+              if (!project) return null;
+              const reversed = index % 2 === 1;
+
+              const rowContent = (
+                <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+                  <div className={`h-64 md:h-80 rounded-2xl overflow-hidden relative ${reversed ? "md:order-2" : ""}`}>
                     <img
                       src={project.img}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                      className="w-full h-full object-cover transition-transform duration-200 work-row-zoom"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-xl text-gray-900 mb-3" style={{ fontWeight: 600 }}>{project.title}</h3>
-                    <p className="justify-body text-gray-600 leading-relaxed">{project.desc}</p>
+                  <div className={reversed ? "md:order-1" : ""}>
+                    <h3 className="text-2xl text-charcoal mb-2" style={{ fontWeight: 600 }}>{project.title}</h3>
+                    <p className="text-charcoal mb-3">{item.outcome}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="text-xs text-charcoal bg-surface border border-line rounded-full px-3 py-1">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="work-desc">
+                      <p className="text-muted-text text-sm leading-relaxed pt-3 max-w-xl">{item.description}</p>
+                    </div>
                   </div>
-                </>
+                </div>
               );
 
               if (project.path) {
@@ -65,16 +178,16 @@ export default function Home() {
                   <Link
                     key={project.id}
                     to={project.path}
-                    className="card-lift block bg-white rounded-2xl overflow-hidden group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                    className="work-row block rounded-2xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
-                    {cardContent}
+                    {rowContent}
                   </Link>
                 );
               }
 
               return (
-                <div key={project.id} className="shadow-card bg-white rounded-2xl overflow-hidden group cursor-default">
-                  {cardContent}
+                <div key={project.id} className="work-row block cursor-default">
+                  {rowContent}
                 </div>
               );
             })}
@@ -82,25 +195,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CONTACT ── */}
-      <section className="py-6 relative overflow-hidden" id="contact" style={{ backgroundColor: "#555B73" }}>
+      {/* ── SERVICES ── */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-8">
+          <h2 className="text-4xl text-navy mb-10 text-center">Services</h2>
+          <div className="border-t border-line">
+            {SERVICES.map((service) => (
+              <div key={service.number} className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-8 py-8 border-b border-line">
+                <span className="text-sm text-muted-text tracking-[0.2em] sm:w-12 flex-shrink-0" style={{ fontWeight: 600 }}>
+                  {service.number}
+                </span>
+                <div>
+                  <h3 className="text-xl text-charcoal mb-2" style={{ fontWeight: 600 }}>{service.heading}</h3>
+                  <p className="text-charcoal leading-relaxed mb-3 max-w-2xl">{service.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.chips.map((chip) => (
+                      <span key={chip} className="text-xs text-charcoal bg-surface border border-line rounded-full px-3 py-1">
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CONTACT CTA ── */}
+      <section className="py-16 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="relative max-w-md mx-auto px-6">
-          <h2 className="text-xl text-white mb-1 text-center">Contact Me</h2>
-          <p className="text-center mb-4 text-xs" style={{ color: "#c9ccd6" }}>
-            Have a project or role in mind? Reach out.
-          </p>
+        <div className="relative max-w-2xl mx-auto px-6 text-center">
+          <h2 className="text-3xl text-white mb-6">Have a problem worth solving?</h2>
           <div className="flex flex-col items-center gap-3">
             <a
               href="mailto:contact@terenceattah.com"
-              className="inline-block bg-white py-1.5 px-6 rounded hover:bg-gray-100 transition-colors text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              style={{ fontWeight: 600, color: "#555B73" }}
+              className="inline-block bg-white text-navy py-3 px-8 rounded hover:bg-gray-100 transition-colors duration-200 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               Email me
             </a>
-            <p className="text-xs" style={{ color: "#c9ccd6" }}>contact@terenceattah.com</p>
+            <p className="text-sm text-white/70">contact@terenceattah.com</p>
           </div>
         </div>
       </section>
@@ -117,7 +253,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/terenceattah/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -126,7 +262,7 @@ export default function Home() {
                 href="https://behance.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Behance"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -137,7 +273,7 @@ export default function Home() {
                 href="https://dribbble.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="text-gray-400 hover:text-white transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />
@@ -146,6 +282,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

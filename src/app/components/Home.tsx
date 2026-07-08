@@ -126,16 +126,9 @@ export default function Home() {
               <h1 className="font-serif font-normal text-4xl md:text-5xl leading-tight mb-4 text-navy">
                 I turn complex systems into products people actually understand.
               </h1>
-              <p className="text-lg md:text-xl text-muted-text leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-muted-text leading-relaxed">
                 Product designer working across digital platforms. I like a good challenge.
               </p>
-              <button
-                type="button"
-                onClick={scrollToWork}
-                className="inline-flex items-center justify-center rounded-md px-8 py-3 text-sm font-medium text-white bg-navy ring-1 ring-gold transition-colors duration-200 hover:bg-navy-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              >
-                See My Work
-              </button>
             </div>
           </div>
         </div>

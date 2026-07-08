@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles";
+import Footer from "./Footer";
 import {
   CaseStudyNav,
   ImageBlock,
@@ -319,17 +319,7 @@ export default function BatchlyCaseStudy() {
 
       <ExploreCaseStudies currentTitle="Batchly" />
 
-      {/* ── FOOTER ── */}
-      <footer className="border-t border-line py-12">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <Link
-            to="/"
-            className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-          >
-            ← Back to portfolio
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

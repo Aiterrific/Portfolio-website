@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.png";
 import terenceHeadshot from "../../assets/terence-attah.jpg";
 import { PROJECTS } from "../data/projects";
@@ -60,18 +59,6 @@ const SERVICES = [
 ];
 
 export default function Home() {
-  const location = useLocation();
-
-  const scrollToWork = () => {
-    document.getElementById("selected-work")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (location.hash === "#selected-work") {
-      document.getElementById("selected-work")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
-
   return (
     <div className="min-h-screen bg-white text-charcoal">
       {/* ── NAV ── */}
@@ -91,13 +78,12 @@ export default function Home() {
             >
               About
             </Link>
-            <button
-              type="button"
-              onClick={scrollToWork}
+            <Link
+              to="/work"
               className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               Work
-            </button>
+            </Link>
             <a
               href="mailto:contact@terenceattah.com"
               className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"

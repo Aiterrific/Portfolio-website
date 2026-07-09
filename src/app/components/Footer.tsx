@@ -1,16 +1,9 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 
 const LINK_CLASSES =
   "text-white/90 hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy";
 
 export default function Footer() {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-
-  const handleWorkClick = () => {
-    document.getElementById("selected-work")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-8 py-16 md:py-20">
@@ -33,15 +26,9 @@ export default function Footer() {
 
           {/* Links */}
           <nav className="flex flex-col gap-4 md:items-end" aria-label="Footer">
-            {isHome ? (
-              <button type="button" onClick={handleWorkClick} className={LINK_CLASSES}>
-                Work
-              </button>
-            ) : (
-              <Link to="/#selected-work" className={LINK_CLASSES}>
-                Work
-              </Link>
-            )}
+            <Link to="/work" className={LINK_CLASSES}>
+              Work
+            </Link>
             <Link to="/about" className={LINK_CLASSES}>
               About
             </Link>

@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
+import WorkPage from "./components/WorkPage";
 import AboutMe from "./components/AboutMe";
 import CoFundEstateCaseStudy from "./components/CoFundEstateCaseStudy";
 import ConnectLocalyCaseStudy from "./components/ConnectLocalyCaseStudy";
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/work" element={<WorkPage />} />
       <Route
         path="/about"
         element={

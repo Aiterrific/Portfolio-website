@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import Footer from "./Footer";
-import { navLinkClasses } from "./navLinkClasses";
+import SiteHeader from "./SiteHeader";
 
 const WORK_ITEMS = [
   {
@@ -38,44 +38,12 @@ const WORK_ITEMS = [
 ];
 
 export default function WorkPage() {
-  const location = useLocation();
-
   return (
     <div className="min-h-screen bg-white text-charcoal">
-      {/* ── NAV ── */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-20 flex items-center justify-between">
-          <Link
-            to="/"
-            className="text-charcoal tracking-[0.2em] text-xl transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            style={{ fontWeight: 700 }}
-          >
-            TERENCE
-          </Link>
-          <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
-            <Link
-              to="/about"
-              aria-current={location.pathname === "/about" ? "page" : undefined}
-              className={navLinkClasses(location.pathname === "/about")}
-            >
-              About
-            </Link>
-            <Link
-              to="/work"
-              aria-current={location.pathname === "/work" ? "page" : undefined}
-              className={navLinkClasses(location.pathname === "/work")}
-            >
-              Work
-            </Link>
-            <a href="mailto:contact@terenceattah.com" className={navLinkClasses(false)}>
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* ── INTRO ── */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="pt-16 md:pt-24 bg-white">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h1 className="font-serif font-normal text-4xl md:text-5xl text-navy mb-4">Selected Work</h1>
           <p className="text-lg text-muted-text">
@@ -85,9 +53,9 @@ export default function WorkPage() {
       </section>
 
       {/* ── WORK GRID ── */}
-      <section className="pb-20 md:pb-24 bg-white">
+      <section className="pt-12 md:pt-16 pb-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {WORK_ITEMS.map((item) => (
               <Link
                 key={item.title}
@@ -101,10 +69,10 @@ export default function WorkPage() {
                     {item.title}
                   </span>
                 </div>
-                <div className="pt-5">
+                <div className="pt-5 pb-6">
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-2">{item.title}</p>
                   <h2
-                    className="text-2xl sm:text-3xl text-navy leading-snug mb-4 group-hover:underline group-hover:decoration-gold group-hover:decoration-2 group-hover:underline-offset-4"
+                    className="text-2xl sm:text-3xl text-navy leading-snug mb-5 group-hover:underline group-hover:decoration-gold group-hover:decoration-2 group-hover:underline-offset-4"
                     style={{ fontWeight: 700 }}
                   >
                     {item.headline}

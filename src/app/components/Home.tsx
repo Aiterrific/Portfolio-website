@@ -1,9 +1,9 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.png";
 import terenceHeadshot from "../../assets/terence-attah.jpg";
 import { PROJECTS } from "../data/projects";
 import Footer from "./Footer";
-import { navLinkClasses } from "./navLinkClasses";
+import SiteHeader from "./SiteHeader";
 
 const SELECTED_WORK = [
   {
@@ -60,41 +60,9 @@ const SERVICES = [
 ];
 
 export default function Home() {
-  const location = useLocation();
-
   return (
     <div className="min-h-screen bg-white text-charcoal">
-      {/* ── NAV ── */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-20 flex items-center justify-between">
-          <Link
-            to="/"
-            className="text-charcoal tracking-[0.2em] text-xl transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            style={{ fontWeight: 700 }}
-          >
-            TERENCE
-          </Link>
-          <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
-            <Link
-              to="/about"
-              aria-current={location.pathname === "/about" ? "page" : undefined}
-              className={navLinkClasses(location.pathname === "/about")}
-            >
-              About
-            </Link>
-            <Link
-              to="/work"
-              aria-current={location.pathname === "/work" ? "page" : undefined}
-              className={navLinkClasses(location.pathname === "/work")}
-            >
-              Work
-            </Link>
-            <a href="mailto:contact@terenceattah.com" className={navLinkClasses(false)}>
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* ── HERO ── */}
       <section className="relative bg-white overflow-hidden">

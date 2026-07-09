@@ -1,8 +1,9 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.png";
 import terenceHeadshot from "../../assets/terence-attah.jpg";
 import { PROJECTS } from "../data/projects";
 import Footer from "./Footer";
+import { navLinkClasses } from "./navLinkClasses";
 
 const SELECTED_WORK = [
   {
@@ -59,6 +60,8 @@ const SERVICES = [
 ];
 
 export default function Home() {
+  const location = useLocation();
+
   return (
     <div className="min-h-screen bg-white text-charcoal">
       {/* ── NAV ── */}
@@ -74,20 +77,19 @@ export default function Home() {
           <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
             <Link
               to="/about"
-              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              aria-current={location.pathname === "/about" ? "page" : undefined}
+              className={navLinkClasses(location.pathname === "/about")}
             >
               About
             </Link>
             <Link
               to="/work"
-              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              aria-current={location.pathname === "/work" ? "page" : undefined}
+              className={navLinkClasses(location.pathname === "/work")}
             >
               Work
             </Link>
-            <a
-              href="mailto:contact@terenceattah.com"
-              className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            >
+            <a href="mailto:contact@terenceattah.com" className={navLinkClasses(false)}>
               Contact
             </a>
           </nav>

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router";
+import { navLinkClasses } from "./navLinkClasses";
 
 const NAV_ITEMS = [
   { label: "Home", to: "/" },
@@ -24,19 +25,19 @@ export default function Layout({ children }: { children: ReactNode }) {
               TERENCE
             </Link>
             <nav className="hidden md:flex gap-10">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  className={`text-sm rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
-                    location.pathname === item.to
-                      ? "text-navy font-medium"
-                      : "text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = location.pathname === item.to;
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    aria-current={isActive ? "page" : undefined}
+                    className={navLinkClasses(isActive)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <button
                 type="button"
                 disabled
@@ -46,10 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               >
                 Resume
               </button>
-              <a
-                href="mailto:contact@terenceattah.com"
-                className="text-sm text-teal hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              >
+              <a href="mailto:contact@terenceattah.com" className={navLinkClasses(false)}>
                 Contact
               </a>
             </nav>

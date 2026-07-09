@@ -1,26 +1,8 @@
 import curvedLines from "figma:asset/e30f175e1bb93890fae06592bb6268108ac16a81.png";
-import profilePhoto from "figma:asset/5dddb5c4efac8f81d00f36917a5d34dbbc65c949.png";
-import cornerstoneLogo from "figma:asset/baecd613e05765c7a5dc52a510b780033772c5e4.png";
-import senecaLogo from "figma:asset/6e901f481d48c258c00bb69fd8968f600fb7c0cd.png";
+import terenceHeadshot from "../../assets/terence-attah.jpg";
 import Footer from "./Footer";
 
-const TOOLS = [
-  "Figma",
-  "FigJam",
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Jira",
-  "Confluence",
-  "Miro",
-  "Notion",
-  "Maze",
-  "Google Analytics (GA4)",
-  "Hotjar",
-  "ChatGPT",
-  "Claude",
-];
-
-const CORE_SKILLS = [
+const CORE_COMPETENCIES = [
   "End-to-End Product Design",
   "UX Research",
   "User Interviews",
@@ -33,146 +15,130 @@ const CORE_SKILLS = [
   "Design Systems",
   "Accessibility (WCAG)",
   "Usability Testing",
-  "Responsive Web & Mobile Design",
-  "Product Discovery",
+  "Responsive Design",
+  "Product Thinking",
+  "Figma",
+  "FigJam",
+  "Miro",
+  "Notion",
+  "Maze",
+  "Google Analytics",
+  "Hotjar",
+  "ChatGPT",
+  "Claude",
   "Cross-Functional Collaboration",
-  "Stakeholder Management",
-  "Design Handoff",
-  "Data-Informed Design",
-  "Agile (Scrum)",
 ];
 
-const EDUCATION = [
-  { school: "Cornerstone Community College", location: "Vancouver, BC", program: "Advanced Diploma in UI/UX Design", year: "Sep 2025", logo: cornerstoneLogo },
-  { school: "Seneca College", location: "North York, ON", program: "Post Graduate Certificate / Business Administration", year: "May 2020", logo: senecaLogo },
-];
-
-const CERTIFICATIONS = [
-  { issuer: "BrainStation", title: "Product Designer Certification (PDC™)", date: "May 2026" },
-  { issuer: "IBM SkillsBuild", title: "Enterprise Design Thinking Practitioner", date: "Oct 2025" },
-  { issuer: "Dev and Design", title: "UI/UX Certificate", date: "Nov 2024" },
-  { issuer: "World Innovation League", title: "DTTP Product Design Certificate", date: "Apr 2024" },
-  { issuer: "Google", title: "Foundations of User Experience (UX) Design", date: "Apr 2024" },
-  { issuer: "SCRUMstudy", title: "Scrum Fundamentals Certified", date: "Apr 2023" },
+const QUOTES = [
+  {
+    text: "Beauty and brains, pleasure and usability: these should go hand in hand.",
+    author: "Don Norman",
+  },
+  {
+    text: "If you do it right, it will last forever.",
+    author: "Massimo Vignelli",
+  },
 ];
 
 export default function AboutMe() {
   return (
     <div>
-      {/* ── ABOUT ME ── */}
-      <section className="py-20 bg-white" id="about">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-16 items-start max-w-5xl mx-auto">
-            <div className="flex-1 order-2 md:order-1">
-              <h2 className="font-serif font-normal text-4xl text-navy mb-10">About Me</h2>
-              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
-                Product Designer with 4 years of experience solving complex problems across fintech, SaaS and e-commerce. I design with a problem-first mindset, using deep Figma expertise to take products from research to high-fidelity UI and dev handoff.
+      {/* ── HERO ── */}
+      <section className="relative bg-white overflow-hidden">
+        <div className="grid md:grid-cols-2 md:min-h-[600px]">
+          <div className="relative h-[400px] md:h-auto">
+            <img
+              src={terenceHeadshot}
+              alt="Terence Attah"
+              className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+            />
+          </div>
+          <div className="px-8 py-16 md:py-20 flex flex-col justify-center">
+            <div className="max-w-lg">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-4">product designer</p>
+              <h1 className="font-serif font-normal text-4xl md:text-5xl leading-tight mb-4 text-navy">
+                I am a product designer who makes complex systems simple enough for anyone to use.
+              </h1>
+              <p className="text-lg md:text-xl text-muted-text leading-relaxed">
+                I help teams turn tangled problems into clear, usable products across fintech, SaaS and real estate.
               </p>
-              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
-                At Batchly, I designed a B2B bulk purchasing platform end to end as an individual project: research, information architecture, UI design, prototyping and walkthrough testing. The buyer-side experience covered supplier comparison, a trust-forward checkout and a reorder-first workflow, with an AI reorder recommendation designed as a concept feature.
-              </p>
-              <p className="justify-body text-charcoal text-lg leading-relaxed mb-6">
-                At PostPilot, I designed the messaging experience for a team-built social media management concept, consolidating conversations from multiple platforms into one inbox with in-place replies. The work ran inside a shared style guide across a multi-designer team, from flows through high-fidelity screens.
-              </p>
-              <p className="justify-body text-charcoal text-lg leading-relaxed">
-                I bring the same approach to every engagement: understand the system, identify where users struggle and design solutions that work for both the user and the business. I am actively seeking full-time Product Design roles.
-              </p>
-
-              {/* Achievements Badges */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
-                {[
-                  { icon: "📊", label: "Data-Driven Product Designer (A/B Testing & Analytics)" },
-                  { icon: "🏆", label: "Hackathon Winner" },
-                  { icon: "🛠️", label: "Design Systems Builder (Scalable UI Libraries)" },
-                  { icon: "♿", label: "Accessibility Advocate (WCAG 2.1 / AODA)" },
-                ].map((a) => (
-                  <div key={a.label} className="bg-surface rounded-lg p-6 text-center hover:bg-band transition-colors">
-                    <div className="text-4xl mb-3">{a.icon}</div>
-                    <div className="text-sm text-muted-text leading-tight">{a.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-8 border-line shadow-xl order-1 md:order-2">
-              <img src={profilePhoto} alt="Terence" className="w-full h-full object-cover object-[center_15%]" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── TECHNICAL SKILLS ── */}
+      {/* ── WHO IS TERENCE ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-8">
+          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">Who Is Terence</h2>
+          <div className="justify-body">
+            <p className="text-charcoal text-lg leading-relaxed mb-6">
+              I am Terence, a Digital Product Designer. I came into design due to my creative mindset and passion for innovation, and I have spent the last 4 years designing products across fintech, SaaS, Realtech, Edtech and more. I approach every project as a problem solver first and a designer second. My focus is on the parts of a product that carry the most risk for the user: the moments where people hesitate, get confused, or give up. I design to remove that friction.
+            </p>
+            <p className="text-charcoal text-lg leading-relaxed mb-6">
+              My strongest work sits at the intersection of product thinking and design, where I can shape both the experience and the logic behind it. I care about accessibility, about learning experiences, and about building products that help people from underrepresented communities grow.
+            </p>
+            <p className="text-charcoal text-lg leading-relaxed">
+              For me, a product succeeds when the company's goals, the user's needs and the team's shared understanding all line up. Clean visuals matter, but clarity matters more.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUOTES ── */}
       <section className="py-20 bg-band relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">Technical Skills</h2>
-          <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {/* Tools */}
-            <div>
-              <h3 className="text-xs tracking-[0.2em] text-muted-text mb-6 uppercase">Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                {TOOLS.map((t) => (
-                  <div key={t} className="bg-surface border border-line rounded-full px-3 py-1.5 text-sm text-charcoal whitespace-nowrap cursor-default">
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Core Skills */}
-            <div>
-              <h3 className="text-xs tracking-[0.2em] text-muted-text mb-6 uppercase">Core Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {CORE_SKILLS.map((s) => (
-                  <div key={s} className="bg-surface border border-line rounded-full px-3 py-1.5 text-sm text-charcoal whitespace-nowrap cursor-default">
-                    {s}
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="relative max-w-5xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+            {QUOTES.map((quote) => (
+              <blockquote key={quote.author} className="text-center md:text-left">
+                <p className="font-serif text-2xl md:text-3xl text-navy leading-snug mb-4">"{quote.text}"</p>
+                <cite className="not-italic text-sm text-muted-text uppercase tracking-[0.1em]">— {quote.author}</cite>
+              </blockquote>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── EDUCATION ── */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-navy mb-6 text-center">Education</h2>
-          <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
-            {EDUCATION.map((e) => (
-              <div key={e.school} className="bg-surface border-2 border-line rounded-xl p-5 hover:shadow-md transition-[box-shadow,border-color] duration-200 flex items-center gap-4 hover:border-navy">
-                <div className="flex-shrink-0 w-16 h-16 bg-white rounded-lg border border-line flex items-center justify-center overflow-hidden p-1">
-                  <img src={e.logo} alt={e.school} className="w-full h-full object-contain" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm text-charcoal mb-0.5 truncate" style={{ fontWeight: 600 }}>{e.school}</p>
-                  <p className="text-xs text-muted-text mb-1">{e.location}</p>
-                  <p className="text-xs text-charcoal leading-snug">{e.program}</p>
-                  <p className="text-xs text-muted-text mt-1">{e.year}</p>
-                </div>
+      {/* ── MY CORE COMPETENCIES ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <h2 className="font-serif font-normal text-4xl text-navy mb-4 text-center">My Core Competencies</h2>
+          <p className="text-muted-text text-center mb-10 max-w-2xl mx-auto">
+            The skills and tools I use to turn ideas into products that work for both users and the business.
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {CORE_COMPETENCIES.map((skill) => (
+              <div
+                key={skill}
+                className="bg-surface border border-line rounded-full px-3 py-1.5 text-sm text-charcoal whitespace-nowrap cursor-default"
+              >
+                {skill}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CERTIFICATIONS ── */}
+      {/* ── WHAT I LIVE FOR ── */}
       <section className="py-20 bg-band relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={curvedLines} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-8">
-          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">Certifications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CERTIFICATIONS.map((c) => (
-              <div key={c.title} className="bg-white border-2 border-line rounded-xl p-6 hover:shadow-lg transition-[box-shadow,border-color] duration-200 hover:border-navy">
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs rounded-full px-3 py-1 bg-surface text-navy">{c.issuer}</span>
-                  <span className="text-xs text-muted-text">{c.date}</span>
-                </div>
-                <p className="text-charcoal" style={{ fontWeight: 600 }}>{c.title}</p>
-              </div>
-            ))}
+        <div className="relative max-w-3xl mx-auto px-8">
+          <h2 className="font-serif font-normal text-4xl text-navy mb-10 text-center">What I Live For</h2>
+          <div className="justify-body">
+            <p className="text-charcoal text-lg leading-relaxed mb-6">
+              When I am not designing, I am usually learning something new or spending time with family playing video games on my console, or long tennis in the summer. This keeps me grounded. I have a partner and family close by in Calgary, and that support is a big part of how I keep growing.
+            </p>
+            <p className="text-charcoal text-lg leading-relaxed mb-6">
+              I like a good challenge. I am drawn to problems that look messy at first, the kind most people avoid, because untangling them is where the interesting work happens.
+            </p>
+            <p className="text-charcoal text-lg leading-relaxed">
+              What I value most is working with people who push me to get better, and building things that make a real difference for the people who use them.
+            </p>
           </div>
         </div>
       </section>

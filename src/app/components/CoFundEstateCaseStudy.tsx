@@ -3,6 +3,7 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles"
 import Footer from "./Footer";
 import ScrollingScreenshot from "./ScrollingScreenshot";
 import landingFull from "../../assets/cofundestate-landing-full.webp";
+import surveyCharts from "../../assets/cofundestate/cofundestate-survey-charts.webp";
 import ProcessPhases from "./ProcessPhases";
 import ResearchStats from "./ResearchStats";
 import PersonaCards from "./PersonaCards";
@@ -199,7 +200,16 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Survey charts — barriers and interest" />
+        <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <img
+            src={surveyCharts}
+            alt="Survey summary charts covering barriers to investment, motivations, group investment interest, commitment ranges, timelines and respondent demographics."
+            className="block max-w-[960px] w-full mx-auto rounded-md border border-[rgba(11,37,69,0.1)]"
+          />
+          <figcaption className="text-sm text-muted-text text-center mt-3">
+            Appendix: survey summary across barriers, motivations, commitment and demographics.
+          </figcaption>
+        </figure>
       </section>
 
       {/* ── 06 PRIORITISATION AND STRATEGIC SCOPE ── */}

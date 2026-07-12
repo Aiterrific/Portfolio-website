@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import ScrollingScreenshot from "./ScrollingScreenshot";
 import landingFull from "../../assets/cofundestate-landing-full.webp";
 import ProcessPhases from "./ProcessPhases";
+import ResearchStats from "./ResearchStats";
+import PersonaCards from "./PersonaCards";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -143,7 +145,12 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Personas — Olu Andre and Nadia Lee" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <ResearchStats />
+        </div>
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <PersonaCards />
+        </div>
       </section>
 
       {/* ── 05 GATHERING INSIGHTS ── */}

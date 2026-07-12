@@ -1,0 +1,118 @@
+/* PersonaCards — two research personas side by side
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.pc-grid {
+  --pc-navy: var(--navy);
+  --pc-blue: var(--gold);
+  --pc-ink: var(--charcoal);
+  --pc-muted: var(--muted-text);
+  --pc-panel: #f5f7fa;
+  --pc-border: rgba(11, 37, 69, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.pc-card {
+  padding: 36px 32px;
+  border: 1px solid var(--pc-border);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.pc-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.pc-photo {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pc-name {
+  margin: 0 0 6px;
+  color: var(--pc-navy);
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pc-meta {
+  margin: 0 0 2px;
+  color: var(--pc-muted);
+  font-size: 15px;
+}
+
+.pc-tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(200, 154, 75, 0.14);
+  color: var(--pc-navy);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pc-summary {
+  margin: 0 0 24px;
+  color: var(--pc-ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.pc-block {
+  margin-bottom: 16px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: var(--pc-panel);
+}
+
+.pc-block:last-child {
+  margin-bottom: 0;
+}
+
+.pc-block-title {
+  margin: 0 0 12px;
+  color: var(--pc-navy);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pc-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--pc-ink);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+.pc-list li + li {
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .pc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pc-card {
+    padding: 28px 22px;
+  }
+}

@@ -3,6 +3,7 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles"
 import Footer from "./Footer";
 import ScrollingScreenshot from "./ScrollingScreenshot";
 import landingFull from "../../assets/cofundestate-landing-full.webp";
+import ProcessPhases from "./ProcessPhases";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -118,19 +119,8 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 03 THE PROCESS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="03">The Process</SectionHeading>
-          <BodyText>
-            <p>
-              The work followed four phases. Discover, through a quantitative survey and a business
-              model canvas. Define, through personas, a business opportunity statement and a full user
-              journey map. Design, through information architecture, user flows, wireframes and
-              high-fidelity UI. Deliver, through an interactive prototype and walkthrough validation.
-              Each phase fed the next, and the strategy shifted meaningfully between them, which the
-              scope section below covers honestly.
-            </p>
-          </BodyText>
+          <ProcessPhases />
         </div>
-        <ImagePlaceholder label="Process — four-phase diagram" />
       </section>
 
       {/* ── 04 UNDERSTANDING THE PROBLEM ── */}

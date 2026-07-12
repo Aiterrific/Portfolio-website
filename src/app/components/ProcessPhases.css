@@ -1,0 +1,106 @@
+/* ProcessPhases — four-phase design process section
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.pp-section {
+  --pp-navy: var(--navy);
+  --pp-blue: var(--teal);
+  --pp-ink: var(--charcoal);
+  --pp-muted: var(--muted-text);
+  --pp-card-bg: #f5f7fa;
+  --pp-card-border: rgba(11, 37, 69, 0.08);
+}
+
+.pp-eyebrow {
+  margin: 0 0 12px;
+  color: var(--pp-blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pp-heading {
+  margin: 0 0 16px;
+  color: var(--pp-navy);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+}
+
+.pp-intro {
+  margin: 0 0 40px;
+  max-width: 68ch;
+  color: var(--pp-muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.pp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--pp-card-border);
+  background: var(--pp-card-border); /* 1px gap reads as hairline dividers */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pp-card {
+  padding: 40px 32px 44px;
+  background: var(--pp-card-bg);
+}
+
+.pp-card:nth-child(even) {
+  background: #ffffff;
+}
+
+.pp-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--pp-navy);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pp-title {
+  margin: 0 0 8px;
+  color: var(--pp-navy);
+  font-size: 24px;
+}
+
+.pp-kicker {
+  margin: 0 0 16px;
+  color: var(--pp-blue);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pp-body {
+  margin: 0;
+  color: var(--pp-ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .pp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pp-grid {
+    grid-template-columns: 1fr;
+  }
+  .pp-card {
+    padding: 32px 24px;
+  }
+}

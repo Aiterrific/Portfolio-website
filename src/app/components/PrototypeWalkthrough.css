@@ -1,0 +1,26 @@
+/* PrototypeWalkthrough — case study video figure
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.pw-figure {
+  --pw-navy: var(--navy);
+  --pw-muted: var(--muted-text);
+  --pw-border: rgba(11, 37, 69, 0.1);
+
+  margin: 0;
+}
+
+.pw-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--pw-border);
+  border-radius: 12px;
+  background: var(--pw-navy);
+}
+
+.pw-caption {
+  margin-top: 12px;
+  color: var(--pw-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}

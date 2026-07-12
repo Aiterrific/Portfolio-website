@@ -15,6 +15,7 @@ import dashboardBefore from "../../assets/cofundestate/cofundestate-ba-dashboard
 import dashboardAfter from "../../assets/cofundestate/cofundestate-ba-dashboard-after.webp";
 import landingBefore from "../../assets/cofundestate/cofundestate-ba-landing-before.webp";
 import landingAfter from "../../assets/cofundestate/cofundestate-ba-landing-after.webp";
+import PrototypeWalkthrough from "./PrototypeWalkthrough";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -419,7 +420,9 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Prototype walkthrough" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <PrototypeWalkthrough />
+        </div>
       </section>
 
       {/* ── 11 RESULTS AND TAKEAWAYS ── */}

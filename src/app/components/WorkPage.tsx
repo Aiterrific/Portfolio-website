@@ -5,35 +5,35 @@ import SiteHeader from "./SiteHeader";
 const WORK_ITEMS = [
   {
     title: "CoFundEstate",
-    headline: "Making Real Estate Investment Accessible Through Crowdfunding.",
+    headline: "Making Real Estate Investing Approachable for First-Time Investors",
     tags: ["UX Research", "Product Strategy", "Prototyping"],
     path: "/case-studies/cofundestate",
-    tintBg: "bg-[#E3EAF0]",
-    tintText: "text-[#00334E]",
+    tintBg: "bg-[#E6EEF3]",
+    primaryClass: "text-navy",
   },
   {
     title: "ConnectLocaly",
-    headline: "Helping Communities Discover and Trust Local Businesses.",
+    headline: "Helping 50+ Local Businesses Get Found: A Mobile Platform Redesign",
     tags: ["UX Research", "Information Architecture", "UI Design"],
     path: "/case-studies/connectlocaly",
-    tintBg: "bg-[#E1EEEC]",
-    tintText: "text-[#005B5E]",
+    tintBg: "bg-[#ECEBF7]",
+    primaryClass: "text-teal",
   },
   {
     title: "Batchly",
-    headline: "Streamlining Bulk Purchasing for Small Business Buyers.",
+    headline: "Designing Trust into Bulk Purchasing for Independent Restaurants",
     tags: ["UX Research", "UI Design", "Prototyping"],
     path: "/case-studies/batchly",
-    tintBg: "bg-[#F3E9D7]",
-    tintText: "text-[#8A6A3A]",
+    tintBg: "bg-[#F4FBDA]",
+    primaryClass: "text-charcoal",
   },
   {
     title: "PostPilot",
-    headline: "Unifying Social Media Conversations Into One Inbox.",
+    headline: "Cutting Time-to-Publish in Half for a SaaS Scheduling Tool",
     tags: ["UX Design", "UI Design", "Design Systems"],
     path: "/case-studies/postpilot",
-    tintBg: "bg-[#E9E6F0]",
-    tintText: "text-[#5B5480]",
+    tintBg: "bg-[#EFDCFA]",
+    primaryClass: "text-muted-text",
   },
 ];
 
@@ -60,19 +60,21 @@ export default function WorkPage() {
               <Link
                 key={item.title}
                 to={item.path}
-                className="card-lift group block cursor-pointer rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                className="group block cursor-pointer rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
               >
-                <div
-                  className={`aspect-[4/3] rounded-2xl flex items-center justify-center ${item.tintBg}`}
-                >
-                  <span className={`text-lg sm:text-xl uppercase tracking-[0.15em] text-center px-6 ${item.tintText}`} style={{ fontWeight: 600 }}>
+                <div className={`aspect-[3/2] rounded-2xl overflow-hidden flex items-center justify-center ${item.tintBg}`}>
+                  {/* PLACEHOLDER: replace with project mockup */}
+                  <span
+                    className={`text-2xl text-center px-6 transition-transform duration-200 group-hover:scale-[1.02] ${item.primaryClass}`}
+                    style={{ fontWeight: 600 }}
+                  >
                     {item.title}
                   </span>
                 </div>
-                <div className="pt-5 pb-6">
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-2">{item.title}</p>
+                <div className="pt-6 pb-6">
+                  <p className="text-base text-muted-text mb-2">{item.title}</p>
                   <h2
-                    className="text-2xl sm:text-3xl text-navy leading-snug mb-5 group-hover:underline group-hover:decoration-gold group-hover:decoration-2 group-hover:underline-offset-4"
+                    className="text-2xl sm:text-3xl text-navy leading-snug mb-5 transition-colors duration-200 group-hover:text-gold"
                     style={{ fontWeight: 700 }}
                   >
                     {item.headline}
@@ -81,7 +83,7 @@ export default function WorkPage() {
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs text-charcoal bg-transparent border border-line rounded-full px-3 py-1"
+                        className="text-sm text-muted-text bg-white border border-line rounded-full px-3 py-1"
                       >
                         {tag}
                       </span>

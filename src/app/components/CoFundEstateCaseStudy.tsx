@@ -13,6 +13,8 @@ import poolsBefore from "../../assets/cofundestate/cofundestate-ba-pools-before.
 import poolsAfter from "../../assets/cofundestate/cofundestate-ba-pools-after.webp";
 import dashboardBefore from "../../assets/cofundestate/cofundestate-ba-dashboard-before.webp";
 import dashboardAfter from "../../assets/cofundestate/cofundestate-ba-dashboard-after.webp";
+import landingBefore from "../../assets/cofundestate/cofundestate-ba-landing-before.webp";
+import landingAfter from "../../assets/cofundestate/cofundestate-ba-landing-after.webp";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -390,7 +392,16 @@ export default function CoFundEstateCaseStudy() {
             </Lead>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Final UI screens" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <BeforeAfter
+            heading="Landing Page"
+            caption="Marketing page reorganized into a numbered, scannable flow with a preference bar mapped to real onboarding and a consistent navy system."
+            beforeSrc={landingBefore}
+            beforeAlt="Original landing page with watermarked stock photography and low-contrast text over the hero image"
+            afterSrc={landingAfter}
+            afterAlt="Rebuilt landing page with navy nav, numbered sections, clear hero copy and a preference bar for risk level, budget and property type"
+          />
+        </div>
       </section>
 
       {/* ── 10 VALIDATING THE DESIGNS ── */}

@@ -1,0 +1,47 @@
+/* BeforeAfter — plain side-by-side comparison
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.ba-card {
+  --ba-navy: var(--navy);
+  --ba-muted: var(--muted-text);
+  --ba-border: rgba(11, 37, 69, 0.1);
+}
+
+.ba-heading {
+  margin: 0 0 8px;
+  color: var(--ba-navy);
+  font-size: 24px;
+}
+
+.ba-caption {
+  margin: 0 0 24px;
+  max-width: 72ch;
+  color: var(--ba-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.ba-panel {
+  margin: 0;
+}
+
+.ba-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ba-border);
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .ba-grid {
+    grid-template-columns: 1fr;
+  }
+}

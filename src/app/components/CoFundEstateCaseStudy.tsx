@@ -8,6 +8,9 @@ import ProcessPhases from "./ProcessPhases";
 import PersonaCards from "./PersonaCards";
 import ArtifactPair from "./ArtifactPair";
 import IAFlowArtifacts from "./IAFlowArtifacts";
+import BeforeAfter from "./BeforeAfter";
+import poolsBefore from "../../assets/cofundestate/cofundestate-ba-pools-before.webp";
+import poolsAfter from "../../assets/cofundestate/cofundestate-ba-pools-after.webp";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -330,7 +333,16 @@ export default function CoFundEstateCaseStudy() {
             </Lead>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Before / After — one-click vs multi-step" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <BeforeAfter
+            heading="Investment Pools"
+            caption="Pool cards unified: consistent progress bars, pledge input and dual actions replace mismatched layouts."
+            beforeSrc={poolsBefore}
+            beforeAlt="Original investment pools screen with mismatched pool card layouts"
+            afterSrc={poolsAfter}
+            afterAlt="Rebuilt investment pools screen with unified pool cards, consistent progress bars, pledge input and dual actions"
+          />
+        </div>
 
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <BodyText>

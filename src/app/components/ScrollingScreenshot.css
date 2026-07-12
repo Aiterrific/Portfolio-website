@@ -1,0 +1,83 @@
+/* ScrollingScreenshot — auto-scrolling page preview inside a browser frame */
+
+.ss-frame {
+  --ss-height: 620px;          /* visible window height on desktop */
+  --ss-duration: 26s;          /* one full top-to-bottom-to-top cycle */
+  --ss-radius: 16px;
+  --ss-chrome-bg: var(--navy);
+  --ss-border: rgba(11, 37, 69, 0.12);
+
+  margin: 0;
+  border-radius: var(--ss-radius);
+  border: 1px solid var(--ss-border);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -24px rgba(11, 37, 69, 0.35);
+  background: #fff;
+}
+
+.ss-chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--ss-chrome-bg);
+}
+
+.ss-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.ss-url {
+  margin-left: 12px;
+  padding: 3px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.ss-viewport {
+  height: var(--ss-height);
+  overflow: hidden;
+}
+
+.ss-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: ss-scroll var(--ss-duration) ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Hold at the top, glide to the bottom, hold, glide back */
+@keyframes ss-scroll {
+  0%   { transform: translateY(0); }
+  8%   { transform: translateY(0); }
+  46%  { transform: translateY(calc(-100% + var(--ss-height))); }
+  54%  { transform: translateY(calc(-100% + var(--ss-height))); }
+  92%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* Let people stop and read */
+.ss-frame:hover .ss-page,
+.ss-frame:focus-within .ss-page {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .ss-frame {
+    --ss-height: 420px;
+    --ss-duration: 22s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ss-page {
+    animation: none;
+  }
+}

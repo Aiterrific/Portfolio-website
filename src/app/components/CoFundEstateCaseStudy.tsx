@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles";
 import Footer from "./Footer";
+import ScrollingScreenshot from "./ScrollingScreenshot";
+import landingFull from "../../assets/cofundestate-landing-full.webp";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -36,7 +38,13 @@ export default function CoFundEstateCaseStudy() {
 
       {/* ── HERO ── */}
       <section className="pb-4 md:pb-8">
-        <ImagePlaceholder label="Hero — product screen" full wide />
+        <div className="w-full mt-8">
+          <ScrollingScreenshot
+            src={landingFull}
+            alt="CoFundEstate landing page, full scroll preview"
+            label="cofundestate.ca"
+          />
+        </div>
         <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 pt-10 md:pt-12`}>
           <h1 className="font-serif font-normal text-navy text-4xl md:text-5xl leading-tight mb-3">
             CoFundEstate

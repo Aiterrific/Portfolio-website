@@ -1,0 +1,129 @@
+/* IAFlowArtifacts — IA board (very wide) and master user flow (very tall)
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.iaf-stack {
+  --iaf-navy: var(--navy);
+  --iaf-accent: var(--gold);
+  --iaf-muted: var(--muted-text);
+  --iaf-border: rgba(11, 37, 69, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.iaf-item {
+  margin: 0;
+}
+
+.iaf-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--iaf-border);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.iaf-trigger:focus-visible {
+  outline: 3px solid var(--iaf-accent);
+  outline-offset: 2px;
+}
+
+.iaf-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The flow diagram is 1:1.5 portrait; cap the preview and top-anchor it.
+   The lightbox carries the full read. */
+.iaf-item-tall .iaf-thumb {
+  max-height: 560px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.iaf-item-tall .iaf-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  pointer-events: none;
+}
+
+.iaf-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--iaf-navy);
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.iaf-trigger:hover .iaf-hint,
+.iaf-trigger:focus-visible .iaf-hint {
+  opacity: 1;
+}
+
+.iaf-caption {
+  margin-top: 12px;
+  color: var(--iaf-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Lightbox — the scroll wrapper lets the tall flow render at readable
+   width and scroll vertically instead of shrinking to fit. */
+
+.iaf-dialog {
+  width: min(96vw, 1600px);
+  max-height: 92vh;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.iaf-dialog::backdrop {
+  background: rgba(11, 37, 69, 0.7);
+}
+
+.iaf-scroll {
+  max-height: calc(92vh - 90px);
+  overflow-y: auto;
+}
+
+.iaf-full {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.iaf-close {
+  display: block;
+  margin: 14px 0 0 auto;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--iaf-navy);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.iaf-close:focus-visible {
+  outline: 3px solid var(--iaf-accent);
+  outline-offset: 2px;
+}

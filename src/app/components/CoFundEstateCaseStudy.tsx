@@ -7,6 +7,7 @@ import surveyCharts from "../../assets/cofundestate/cofundestate-survey-charts.w
 import ProcessPhases from "./ProcessPhases";
 import PersonaCards from "./PersonaCards";
 import ArtifactPair from "./ArtifactPair";
+import IAFlowArtifacts from "./IAFlowArtifacts";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -293,7 +294,9 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="IA board and User Flow" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <IAFlowArtifacts />
+        </div>
       </section>
 
       {/* ── 09 THE SOLUTION AND DESIGN DECISIONS ── */}

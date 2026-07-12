@@ -20,7 +20,6 @@ import {
   CaseStudyNav,
   SectionHeading,
   Lead,
-  PrototypeCTA,
   ExploreCaseStudies,
 } from "./CaseStudyShared";
 
@@ -454,8 +453,6 @@ export default function CoFundEstateCaseStudy() {
           </BodyText>
         </div>
       </section>
-
-      <PrototypeCTA buttonLabel="Prototype coming soon" />
 
       <ExploreCaseStudies currentTitle="CoFundEstate" />
 

@@ -70,22 +70,23 @@ function PersonaBlock({ title, items }) {
 
 export default function PersonaCards() {
   return (
-    <div className="pc-grid">
+    <div className="pc-stack">
       {PERSONAS.map((p) => (
-        <article className="pc-card" key={p.name}>
-          <header className="pc-header">
+        <article className="pc-board" key={p.name}>
+          <aside className="pc-rail">
             <img className="pc-photo" src={p.img} alt={`Persona portrait, ${p.name}`} />
-            <div className="pc-id">
-              <h3 className="pc-name">{p.name}</h3>
-              <p className="pc-meta">{p.age} · {p.role}</p>
-              <p className="pc-meta">{p.location}</p>
-              <span className="pc-tag">{p.tag}</span>
-            </div>
-          </header>
-          <p className="pc-summary">{p.summary}</p>
-          <PersonaBlock title="Goals" items={p.goals} />
-          <PersonaBlock title="Frustrations" items={p.frustrations} />
-          <PersonaBlock title="Habits" items={p.habits} />
+            <h3 className="pc-name">{p.name}</h3>
+            <p className="pc-meta">{p.age}</p>
+            <p className="pc-meta">{p.role}</p>
+            <p className="pc-meta">{p.location}</p>
+            <span className="pc-tag">{p.tag}</span>
+          </aside>
+          <div className="pc-content">
+            <p className="pc-summary">{p.summary}</p>
+            <PersonaBlock title="Goals" items={p.goals} />
+            <PersonaBlock title="Frustrations" items={p.frustrations} />
+            <PersonaBlock title="Habits" items={p.habits} />
+          </div>
         </article>
       ))}
     </div>

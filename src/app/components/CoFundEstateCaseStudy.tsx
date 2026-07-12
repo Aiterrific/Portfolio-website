@@ -5,7 +5,6 @@ import ScrollingScreenshot from "./ScrollingScreenshot";
 import landingFull from "../../assets/cofundestate-landing-full.webp";
 import surveyCharts from "../../assets/cofundestate/cofundestate-survey-charts.webp";
 import ProcessPhases from "./ProcessPhases";
-import ResearchStats from "./ResearchStats";
 import PersonaCards from "./PersonaCards";
 import {
   CaseStudyNav,
@@ -145,9 +144,6 @@ export default function CoFundEstateCaseStudy() {
               ages, different risk appetites, one shared frustration: no accessible, trustworthy way in.
             </p>
           </BodyText>
-        </div>
-        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-          <ResearchStats />
         </div>
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <PersonaCards />

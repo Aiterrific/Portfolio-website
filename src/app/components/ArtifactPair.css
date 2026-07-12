@@ -1,0 +1,111 @@
+/* ArtifactPair — two dense research artifacts side by side with lightbox
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.ap-grid {
+  --ap-navy: var(--navy);
+  --ap-accent: var(--gold);
+  --ap-muted: var(--muted-text);
+  --ap-border: rgba(11, 37, 69, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.ap-item {
+  margin: 0;
+}
+
+.ap-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--ap-border);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.ap-trigger:focus-visible {
+  outline: 3px solid var(--ap-accent);
+  outline-offset: 2px;
+}
+
+.ap-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ap-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--ap-navy);
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ap-trigger:hover .ap-hint,
+.ap-trigger:focus-visible .ap-hint {
+  opacity: 1;
+}
+
+.ap-caption {
+  margin-top: 12px;
+  color: var(--ap-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Lightbox */
+
+.ap-dialog {
+  width: min(96vw, 1600px);
+  max-height: 92vh;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.ap-dialog::backdrop {
+  background: rgba(11, 37, 69, 0.7);
+}
+
+.ap-full {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(92vh - 90px);
+  object-fit: contain;
+}
+
+.ap-close {
+  display: block;
+  margin: 14px 0 0 auto;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--ap-navy);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ap-close:focus-visible {
+  outline: 3px solid var(--ap-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+  }
+}

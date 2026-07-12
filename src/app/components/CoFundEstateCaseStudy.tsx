@@ -6,6 +6,7 @@ import landingFull from "../../assets/cofundestate-landing-full.webp";
 import surveyCharts from "../../assets/cofundestate/cofundestate-survey-charts.webp";
 import ProcessPhases from "./ProcessPhases";
 import PersonaCards from "./PersonaCards";
+import ArtifactPair from "./ArtifactPair";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -234,7 +235,9 @@ export default function CoFundEstateCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Business Model Canvas and User Journey Map" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <ArtifactPair />
+        </div>
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <BodyText>
             <p>

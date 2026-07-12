@@ -11,6 +11,8 @@ import IAFlowArtifacts from "./IAFlowArtifacts";
 import BeforeAfter from "./BeforeAfter";
 import poolsBefore from "../../assets/cofundestate/cofundestate-ba-pools-before.webp";
 import poolsAfter from "../../assets/cofundestate/cofundestate-ba-pools-after.webp";
+import dashboardBefore from "../../assets/cofundestate/cofundestate-ba-dashboard-before.webp";
+import dashboardAfter from "../../assets/cofundestate/cofundestate-ba-dashboard-after.webp";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -366,7 +368,16 @@ export default function CoFundEstateCaseStudy() {
             </Lead>
           </BodyText>
         </div>
-        <ImagePlaceholder label="Before / After — open feed vs structured discovery" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <BeforeAfter
+            heading="Dashboard"
+            caption="Stat hierarchy clarified, opportunity and pool sections aligned to one grid, progress chart given breathing room."
+            beforeSrc={dashboardBefore}
+            beforeAlt="Original dashboard with flat stat cards and misaligned opportunity and pool sections"
+            afterSrc={dashboardAfter}
+            afterAlt="Rebuilt dashboard with clarified stat hierarchy, one aligned grid for opportunities and pools, and space around the progress chart"
+          />
+        </div>
 
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <BodyText>

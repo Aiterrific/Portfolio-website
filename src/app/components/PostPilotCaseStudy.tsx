@@ -8,13 +8,13 @@ export default function PostPilotCaseStudy() {
       <CaseStudyNav />
 
       {/* ── HERO IMAGE ── */}
-      <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+      <div className="w-full mt-8">
         <img
           src={postpilotHero}
           alt="PostPilot brand lockup with calendar, analytics and messaging screens on a purple gradient"
-          className="w-full h-auto max-w-full border border-line rounded-[12px]"
+          className="w-full h-auto border border-line rounded-[12px]"
         />
-      </figure>
+      </div>
 
       {/* ── INTRO ── */}
       <section className="pt-10 md:pt-12 pb-12 md:pb-16">

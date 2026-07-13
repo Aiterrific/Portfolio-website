@@ -6,7 +6,7 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT, CASE_STUDY_HEADING_LABEL } from
 export function CaseStudyNav() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
-      <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 h-16 flex items-center justify-between`}>
+      <div className={`${CASE_STUDY_WIDTH} mx-auto h-16 flex items-center justify-between`}>
         <Link
           to="/"
           className="text-charcoal text-sm tracking-[0.2em] transition-opacity duration-200 hover:opacity-70 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"

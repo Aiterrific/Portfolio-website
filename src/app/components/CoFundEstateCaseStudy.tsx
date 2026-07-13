@@ -58,7 +58,7 @@ export default function CoFundEstateCaseStudy() {
             label="cofundestate.ca"
           />
         </div>
-        <div className={`${CASE_STUDY_WIDTH} mx-auto px-6 pt-10 md:pt-12`}>
+        <div className={`${CASE_STUDY_WIDTH} mx-auto pt-10 md:pt-12`}>
           <h1 className="font-serif font-normal text-navy text-4xl md:text-5xl leading-tight mb-3">
             CoFundEstate
           </h1>

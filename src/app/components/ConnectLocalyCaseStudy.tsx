@@ -18,7 +18,7 @@ export default function ConnectLocalyCaseStudy() {
       {/* ── HERO ── */}
       <section className="pt-16 pb-0 md:pt-24">
         <div className={`${CASE_STUDY_WIDTH} mx-auto grid md:grid-cols-[1fr_320px] gap-10 md:gap-16 items-start`}>
-          <div className={CASE_STUDY_WIDTH}>
+          <div>
             <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-muted-text font-heading mb-4">
               Case Study
             </p>

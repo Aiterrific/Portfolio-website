@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Footer from "./Footer";
 import SiteHeader from "./SiteHeader";
+import cofundestateCard from "../../assets/cofundestate/cofundestate-card.webp";
 
 const WORK_ITEMS = [
   {
@@ -10,6 +11,8 @@ const WORK_ITEMS = [
     path: "/case-studies/cofundestate",
     tintBg: "bg-[#E6EEF3]",
     primaryClass: "text-navy",
+    img: cofundestateCard,
+    alt: "CoFundEstate landing page design with navy nav, hero headline and investment preference bar",
   },
   {
     title: "ConnectLocaly",
@@ -63,13 +66,23 @@ export default function WorkPage() {
                 className="group block cursor-pointer rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
               >
                 <div className={`aspect-[3/2] rounded-2xl overflow-hidden flex items-center justify-center ${item.tintBg}`}>
-                  {/* PLACEHOLDER: replace with project mockup */}
-                  <span
-                    className={`text-2xl text-center px-6 transition-transform duration-200 group-hover:scale-[1.02] ${item.primaryClass}`}
-                    style={{ fontWeight: 600 }}
-                  >
-                    {item.title}
-                  </span>
+                  {item.img ? (
+                    <img
+                      src={item.img}
+                      alt={item.alt}
+                      className="w-full h-full object-cover object-top transition-transform duration-200 group-hover:scale-[1.02]"
+                    />
+                  ) : (
+                    <>
+                      {/* PLACEHOLDER: replace with project mockup */}
+                      <span
+                        className={`text-2xl text-center px-6 transition-transform duration-200 group-hover:scale-[1.02] ${item.primaryClass}`}
+                        style={{ fontWeight: 600 }}
+                      >
+                        {item.title}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <div className="pt-6 pb-6">
                   <p className="text-base text-muted-text mb-2">{item.title}</p>

@@ -109,8 +109,8 @@ export default function Home() {
                   <div className={`h-64 md:h-80 rounded-2xl overflow-hidden relative ${reversed ? "md:order-2" : ""}`}>
                     <img
                       src={project.img}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-200 work-row-zoom"
+                      alt={project.alt ?? project.title}
+                      className={`w-full h-full object-cover transition-transform duration-200 work-row-zoom ${project.title === "CoFundEstate" ? "object-top" : ""}`}
                     />
                   </div>
                   <div className={reversed ? "md:order-1" : ""}>

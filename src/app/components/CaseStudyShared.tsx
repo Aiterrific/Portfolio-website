@@ -122,9 +122,18 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
         <SectionHeading number="14">Explore Case Studies</SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
           {otherProjects.map((project) => {
+            const hasRealImage = !project.img.startsWith("http");
             const cardContent = (
               <>
-                <PlaceholderBox label={project.title} />
+                {hasRealImage ? (
+                  <img
+                    src={project.img}
+                    alt={project.alt ?? project.title}
+                    className={`w-full aspect-video object-cover rounded-md ${project.title === "CoFundEstate" ? "object-top" : "object-center"}`}
+                  />
+                ) : (
+                  <PlaceholderBox label={project.title} />
+                )}
                 <h3 className="mt-4 text-base md:text-lg text-charcoal">{project.title}</h3>
                 <p className="justify-body mt-1 text-sm text-charcoal leading-relaxed">{project.desc}</p>
               </>

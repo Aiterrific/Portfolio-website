@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import Footer from "./Footer";
 import SiteHeader from "./SiteHeader";
 import cofundestateCard from "../../assets/cofundestate/cofundestate-card.webp";
+import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 
 const WORK_ITEMS = [
   {
@@ -13,6 +14,7 @@ const WORK_ITEMS = [
     primaryClass: "text-navy",
     img: cofundestateCard,
     alt: "CoFundEstate landing page design with navy nav, hero headline and investment preference bar",
+    imgPosition: "object-top",
   },
   {
     title: "ConnectLocaly",
@@ -37,6 +39,9 @@ const WORK_ITEMS = [
     path: "/case-studies/postpilot",
     tintBg: "bg-[#EFDCFA]",
     primaryClass: "text-muted-text",
+    img: postpilotHero,
+    alt: "PostPilot brand lockup with product screens on a purple gradient",
+    imgPosition: "object-center",
   },
 ];
 
@@ -70,7 +75,7 @@ export default function WorkPage() {
                     <img
                       src={item.img}
                       alt={item.alt}
-                      className="w-full h-full object-cover object-top transition-transform duration-200 group-hover:scale-[1.02]"
+                      className={`w-full h-full object-cover ${item.imgPosition ?? "object-center"} transition-transform duration-200 group-hover:scale-[1.02]`}
                     />
                   ) : (
                     <>

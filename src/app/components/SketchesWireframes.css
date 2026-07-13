@@ -1,0 +1,59 @@
+/* SketchesWireframes — sketches 3-up, wireframes 4-up, no expand behaviour
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.sw-stack {
+  --sw-navy: var(--navy);
+  --sw-muted: var(--muted-text);
+  --sw-border: rgba(11, 37, 69, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.sw-row {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+}
+
+.sw-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sw-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sw-item {
+  margin: 0;
+}
+
+.sw-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--sw-border);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.sw-caption {
+  margin-top: 10px;
+  color: var(--sw-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .sw-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sw-row-3,
+  .sw-row-4 {
+    grid-template-columns: 1fr;
+  }
+}

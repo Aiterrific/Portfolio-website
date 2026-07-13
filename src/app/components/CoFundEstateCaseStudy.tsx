@@ -16,6 +16,7 @@ import dashboardAfter from "../../assets/cofundestate/cofundestate-ba-dashboard-
 import landingBefore from "../../assets/cofundestate/cofundestate-ba-landing-before.webp";
 import landingAfter from "../../assets/cofundestate/cofundestate-ba-landing-after.webp";
 import PrototypeWalkthrough from "./PrototypeWalkthrough";
+import SketchesWireframes from "./SketchesWireframes";
 import {
   CaseStudyNav,
   SectionHeading,
@@ -303,6 +304,19 @@ export default function CoFundEstateCaseStudy() {
         </div>
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <IAFlowArtifacts />
+        </div>
+      </section>
+
+      {/* ── EARLY EXPLORATION: SKETCHES AND WIREFRAMES ── */}
+      <section className="py-12 md:py-16 border-t border-line">
+        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-4">Early exploration</p>
+          <h2 className="font-serif font-normal text-4xl text-navy mb-4">From sketch to screen</h2>
+          <p className="text-muted-text text-lg mb-8">
+            Before any pixels, the core flows were worked out on paper, then translated into greyscale
+            wireframes.
+          </p>
+          <SketchesWireframes />
         </div>
       </section>
 

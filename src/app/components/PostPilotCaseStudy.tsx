@@ -11,6 +11,7 @@ import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
 import PersonaExpandCards from "./PersonaExpandCards";
 import ProductScreensCollage from "./ProductScreensCollage";
+import AnalyticsScreensCollage from "./AnalyticsScreensCollage";
 
 function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
   return (
@@ -301,7 +302,13 @@ export default function PostPilotCaseStudy() {
             calendar in month and week views.
           </p>
         </div>
-        <ImagePlaceholder label="postpilot-analytics-screen" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <AnalyticsScreensCollage />
+          <p className="text-sm text-muted-text text-center mt-3">
+            Analytics across every channel — audience totals, per-post performance and channel-level
+            trends in one place.
+          </p>
+        </div>
       </section>
 
       {/* ── VALIDATION ── */}

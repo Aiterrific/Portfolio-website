@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Footer from "./Footer";
 import SiteHeader from "./SiteHeader";
+import batchlyComingSoon from "../../assets/batchly/batchly-coming-soon.webp";
 import cofundestateCard from "../../assets/cofundestate/cofundestate-card.webp";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 
@@ -31,6 +32,9 @@ const WORK_ITEMS = [
     path: "/case-studies/batchly",
     tintBg: "bg-[#F4FBDA]",
     primaryClass: "text-charcoal",
+    img: batchlyComingSoon,
+    alt: "Batchly case study coming soon",
+    imgPosition: "object-center",
   },
   {
     title: "PostPilot",

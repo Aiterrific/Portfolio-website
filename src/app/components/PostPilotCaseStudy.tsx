@@ -7,6 +7,7 @@ import postpilotCompetitiveAnalysis from "../../assets/postpilot/postpilot-compe
 import postpilotFeatureComparison from "../../assets/postpilot/postpilot-feature-comparison.webp";
 import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
+import PersonaExpandCards from "./PersonaExpandCards";
 
 function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
   return (
@@ -227,25 +228,8 @@ export default function PostPilotCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6`}>
-          <div
-            role="img"
-            aria-label="Placeholder image: postpilot-persona-emily"
-            className="w-full aspect-video bg-navy rounded-md flex items-center justify-center px-6"
-          >
-            <span className="text-xs md:text-sm uppercase tracking-wide text-white/80 text-center">
-              postpilot-persona-emily
-            </span>
-          </div>
-          <div
-            role="img"
-            aria-label="Placeholder image: postpilot-persona-john"
-            className="w-full aspect-video bg-navy rounded-md flex items-center justify-center px-6"
-          >
-            <span className="text-xs md:text-sm uppercase tracking-wide text-white/80 text-center">
-              postpilot-persona-john
-            </span>
-          </div>
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <PersonaExpandCards />
         </div>
       </section>
 

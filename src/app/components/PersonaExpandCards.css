@@ -1,0 +1,110 @@
+/* PersonaExpandCards — two equal persona boards, click to expand
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.pec-grid {
+  --pec-navy: var(--navy);
+  --pec-accent: var(--gold);
+  --pec-muted: var(--muted-text);
+  --pec-border: rgba(11, 37, 69, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.pec-item {
+  margin: 0;
+}
+
+.pec-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--pec-border);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.pec-trigger:focus-visible {
+  outline: 3px solid var(--pec-accent);
+  outline-offset: 2px;
+}
+
+.pec-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pec-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--pec-navy);
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pec-trigger:hover .pec-hint,
+.pec-trigger:focus-visible .pec-hint {
+  opacity: 1;
+}
+
+.pec-caption {
+  margin-top: 12px;
+  color: var(--pec-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pec-dialog {
+  width: min(96vw, 1500px);
+  max-height: 92vh;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.pec-dialog::backdrop {
+  background: rgba(11, 37, 69, 0.7);
+}
+
+.pec-full {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(92vh - 90px);
+  object-fit: contain;
+}
+
+.pec-close {
+  display: block;
+  margin: 14px 0 0 auto;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--pec-navy);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pec-close:focus-visible {
+  outline: 3px solid var(--pec-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .pec-grid {
+    grid-template-columns: 1fr;
+  }
+}

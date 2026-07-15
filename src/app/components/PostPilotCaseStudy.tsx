@@ -6,6 +6,7 @@ import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 import postpilotCompetitiveAnalysis from "../../assets/postpilot/postpilot-competitive-analysis.webp";
 import postpilotFeatureComparison from "../../assets/postpilot/postpilot-feature-comparison.webp";
 import postpilotMessagingFlow from "../../assets/postpilot/postpilot-messaging-flow.webp";
+import postpilotMessagingScreens from "../../assets/postpilot/postpilot-messaging-screens.webp";
 import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
 import PersonaExpandCards from "./PersonaExpandCards";
@@ -266,7 +267,17 @@ export default function PostPilotCaseStudy() {
             loop.
           </p>
         </div>
-        <ImagePlaceholder label="postpilot-messaging-screens" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <img
+            src={postpilotMessagingScreens}
+            alt="PostPilot unified inbox: channel sidebar with Facebook, LinkedIn and Instagram, thread list with All, Read and Unread tabs, open conversation with message history and reply box, and a contact context panel showing the sender's role and audience"
+            className="w-full h-auto border border-line rounded-[12px]"
+          />
+          <p className="text-sm text-muted-text text-center mt-3">
+            The unified inbox — channel identity, triage tabs, history beside the reply box and sender
+            context in one view.
+          </p>
+        </div>
       </section>
 
       {/* ── THE PRODUCT ── */}

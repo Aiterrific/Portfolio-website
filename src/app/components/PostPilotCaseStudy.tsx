@@ -5,6 +5,7 @@ import { CaseStudyNav, ExploreCaseStudies } from "./CaseStudyShared";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 import postpilotCompetitiveAnalysis from "../../assets/postpilot/postpilot-competitive-analysis.webp";
 import postpilotFeatureComparison from "../../assets/postpilot/postpilot-feature-comparison.webp";
+import postpilotMessagingFlow from "../../assets/postpilot/postpilot-messaging-flow.webp";
 import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
 import PersonaExpandCards from "./PersonaExpandCards";
@@ -254,7 +255,17 @@ export default function PostPilotCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="postpilot-messaging-flow" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <img
+            src={postpilotMessagingFlow}
+            alt="Messaging flow diagram: from opening Messages through channel filtering into the unified inbox, opening a DM, comment reply or mention into the conversation view, then sending a reply or saving a draft, with sent threads marked read and returning to the inbox"
+            className="w-full h-auto border border-line rounded-[12px]"
+          />
+          <p className="text-sm text-muted-text text-center mt-3">
+            The unified inbox flow — every path from entry to reply, with read state driving the return
+            loop.
+          </p>
+        </div>
         <ImagePlaceholder label="postpilot-messaging-screens" />
       </section>
 

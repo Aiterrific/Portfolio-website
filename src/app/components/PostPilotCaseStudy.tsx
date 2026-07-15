@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { CaseStudyNav, ExploreCaseStudies } from "./CaseStudyShared";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 import ResearchStoryboards from "./ResearchStoryboards";
+import KeyFindingsCollage from "./KeyFindingsCollage";
 
 function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
   return (
@@ -164,7 +165,12 @@ export default function PostPilotCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="postpilot-key-findings" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <KeyFindingsCollage />
+          <p className="text-sm text-muted-text text-center mt-3">
+            Key survey findings — satisfaction drivers, preferences, top rated features and user concerns.
+          </p>
+        </div>
       </section>
 
       {/* ── MARKET ── */}

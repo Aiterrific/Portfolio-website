@@ -3,6 +3,8 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles"
 import Footer from "./Footer";
 import { CaseStudyNav, ExploreCaseStudies } from "./CaseStudyShared";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
+import postpilotCompetitiveAnalysis from "../../assets/postpilot/postpilot-competitive-analysis.webp";
+import postpilotFeatureComparison from "../../assets/postpilot/postpilot-feature-comparison.webp";
 import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
 
@@ -17,6 +19,14 @@ function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }
 
 function BodyText({ children }: { children: ReactNode }) {
   return <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>;
+}
+
+function CaseImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+      <img src={src} alt={alt} className="w-full h-auto border border-line rounded-[12px]" />
+    </figure>
+  );
 }
 
 function ImagePlaceholder({ label, wide = false }: { label: string; wide?: boolean }) {
@@ -187,8 +197,21 @@ export default function PostPilotCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="postpilot-competitive-analysis" />
-        <ImagePlaceholder label="postpilot-feature-comparison" />
+        <CaseImage
+          src={postpilotCompetitiveAnalysis}
+          alt="Competitive analysis table comparing Buffer, Zoho Social, Hootsuite and Sendible across scheduling, platform integration, analytics, collaboration and unique features"
+        />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <img
+            src={postpilotFeatureComparison}
+            alt="Feature comparison matrix showing PostPilot alongside four competitors, with PostPilot alone offering multi-profile creation and calendar reminder integration"
+            className="w-full h-auto border border-line rounded-[12px]"
+          />
+          <p className="text-sm text-muted-text text-center mt-3">
+            PostPilot's edge: multi-profile creation and calendar reminders, missing from every
+            competitor audited.
+          </p>
+        </div>
       </section>
 
       {/* ── USERS ── */}

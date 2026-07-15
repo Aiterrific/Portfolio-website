@@ -1,0 +1,52 @@
+/* ProductScreensCollage — seven screens lapping in a fixed card frame.
+   The frame keeps a set aspect ratio; screens cascade inside it and
+   never grow the frame. Colours drawn from the site's global design
+   tokens (src/styles/theme.css). */
+
+.psc-frame {
+  --psc-border: rgba(11, 37, 69, 0.1);
+  --psc-shadow: 0 18px 44px -18px rgba(11, 37, 69, 0.35);
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border: 1px solid var(--psc-border);
+  border-radius: 16px;
+  background: #f5f7fa;
+  overflow: hidden;
+}
+
+.psc-screen {
+  position: absolute;
+  width: 44%;
+  height: auto;
+  border: 1px solid var(--psc-border);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: var(--psc-shadow);
+}
+
+/* Cascade: back-left to front-right; later screens sit on top */
+.psc-1 { left: 3%;  top: 5%;  transform: rotate(-1.2deg); }
+.psc-2 { left: 13%; top: 16%; transform: rotate(0.8deg); }
+.psc-3 { left: 23%; top: 27%; transform: rotate(-0.6deg); }
+.psc-4 { left: 33%; top: 38%; transform: rotate(1deg); }
+.psc-5 { left: 43%; top: 49%; transform: rotate(-0.8deg); }
+.psc-6 { left: 30%; top: 8%;  width: 40%; transform: rotate(1.2deg); }
+.psc-7 { left: 52%; top: 22%; width: 45%; transform: rotate(-1deg); }
+
+@media (max-width: 700px) {
+  .psc-frame {
+    aspect-ratio: auto;
+    padding: 20px;
+  }
+  .psc-screen {
+    position: static;
+    width: 100%;
+    margin: 0 0 16px;
+    transform: none;
+  }
+  .psc-screen:last-child {
+    margin-bottom: 0;
+  }
+}

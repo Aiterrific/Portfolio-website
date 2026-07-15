@@ -10,6 +10,7 @@ import postpilotMessagingScreens from "../../assets/postpilot/postpilot-messagin
 import ResearchStoryboards from "./ResearchStoryboards";
 import KeyFindingsCollage from "./KeyFindingsCollage";
 import PersonaExpandCards from "./PersonaExpandCards";
+import ProductScreensCollage from "./ProductScreensCollage";
 
 function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
   return (
@@ -293,9 +294,14 @@ export default function PostPilotCaseStudy() {
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="postpilot-mockup-calendar" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <ProductScreensCollage />
+          <p className="text-sm text-muted-text text-center mt-3">
+            The create flow end to end — composing, scheduling, approval and team roles, with the
+            calendar in month and week views.
+          </p>
+        </div>
         <ImagePlaceholder label="postpilot-analytics-screen" />
-        <ImagePlaceholder label="postpilot-final-screens" />
       </section>
 
       {/* ── VALIDATION ── */}

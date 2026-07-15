@@ -3,6 +3,7 @@ import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles"
 import Footer from "./Footer";
 import { CaseStudyNav, ExploreCaseStudies } from "./CaseStudyShared";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
+import ResearchStoryboards from "./ResearchStoryboards";
 
 function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
   return (
@@ -132,13 +133,19 @@ export default function PostPilotCaseStudy() {
           <SectionIntro eyebrow="Research" heading="What managers told us" />
           <BodyText>
             <p>
-              We surveyed social media managers and business owners on their current tools, then ran
-              screener questions to focus the findings: the challenges of managing multiple accounts, the
-              features they lean on, and what today's tools miss.
+              We surveyed social media managers and business owners on their current tools, then walked a
+              competitor product end to end, from sign-up through posting to analytics, documenting every
+              point where the workflow broke down.
             </p>
           </BodyText>
         </div>
-        <ImagePlaceholder label="postpilot-research-screeners" />
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+          <ResearchStoryboards />
+          <p className="text-sm text-muted-text text-center mt-3">
+            Walkthrough of a competitor tool — post creation, customization and analytics marked as
+            friction points.
+          </p>
+        </div>
 
         <StatStrip
           stats={[

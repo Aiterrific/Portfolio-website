@@ -1,0 +1,56 @@
+/* ResearchStoryboards — three boards lapping each other in one card frame
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.rsb-frame {
+  --rsb-border: rgba(11, 37, 69, 0.1);
+  --rsb-shadow: 0 16px 40px -16px rgba(11, 37, 69, 0.25);
+
+  position: relative;
+  padding: 40px;
+  border: 1px solid var(--rsb-border);
+  border-radius: 16px;
+  background: #f5f7fa;
+  overflow: hidden;
+}
+
+.rsb-board {
+  display: block;
+  width: 72%;
+  height: auto;
+  border: 1px solid var(--rsb-border);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: var(--rsb-shadow);
+}
+
+/* Lapped composition: each board offsets and slightly rotates over the last */
+.rsb-a {
+  transform: rotate(-1.2deg);
+}
+
+.rsb-b {
+  width: 46%;
+  margin: -6% 0 0 auto;
+  transform: rotate(1.4deg);
+}
+
+.rsb-c {
+  margin: -4% auto 0 8%;
+  transform: rotate(-0.6deg);
+}
+
+@media (max-width: 700px) {
+  .rsb-frame {
+    padding: 20px;
+  }
+  .rsb-board,
+  .rsb-b,
+  .rsb-c {
+    width: 100%;
+    margin: 0 0 16px;
+    transform: none;
+  }
+  .rsb-board:last-child {
+    margin-bottom: 0;
+  }
+}

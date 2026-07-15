@@ -1,0 +1,51 @@
+/* ComingSoonCard — soft radial glow inside a framed card.
+   Colours are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.csc-frame {
+  --csc-border: rgba(11, 37, 69, 0.1);
+  --csc-ink: var(--navy);
+  --csc-muted: var(--muted-text);
+  --csc-glow: rgba(240, 140, 50, 0.55);
+
+  position: relative;
+  padding: 120px 32px;
+  border: 1px solid var(--csc-border);
+  border-radius: 16px;
+  background: #eef1f6;
+  text-align: center;
+  overflow: hidden;
+}
+
+.csc-glow {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: 70%;
+  aspect-ratio: 1.5;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, var(--csc-glow), transparent);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.csc-title {
+  position: relative;
+  margin: 0 0 14px;
+  font-size: clamp(36px, 6vw, 64px);
+  color: var(--csc-ink);
+}
+
+.csc-sub {
+  position: relative;
+  margin: 0 auto;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--csc-muted);
+}
+
+@media (max-width: 700px) {
+  .csc-frame {
+    padding: 80px 20px;
+  }
+}

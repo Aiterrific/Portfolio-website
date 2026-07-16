@@ -54,6 +54,44 @@ export function ImageBlock({ label, wide = false }: { label: string; wide?: bool
   );
 }
 
+export function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
+  return (
+    <>
+      <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-4">{eyebrow}</p>
+      <h2 className="font-serif font-normal text-4xl text-navy mb-4">{heading}</h2>
+    </>
+  );
+}
+
+export function BodyText({ children }: { children: ReactNode }) {
+  return <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>;
+}
+
+export function CaseImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+      <img src={src} alt={alt} className="w-full h-auto border border-line rounded-[12px]" />
+    </figure>
+  );
+}
+
+export function StatStrip({ stats }: { stats: { value: string; label: string }[] }) {
+  return (
+    <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {stats.map((stat) => (
+          <div key={stat.label}>
+            <p className="text-navy text-4xl md:text-5xl leading-none mb-2" style={{ fontWeight: 700 }}>
+              {stat.value}
+            </p>
+            <p className="text-muted-text text-sm leading-relaxed">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function SectionHeading({ number, children }: { number: string; children: ReactNode }) {
   return (
     <h2 className="flex items-baseline gap-3 mb-6 md:mb-8">

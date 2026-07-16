@@ -1,7 +1,6 @@
-import type { ReactNode } from "react";
 import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles";
 import Footer from "./Footer";
-import { CaseStudyNav, ExploreCaseStudies } from "./CaseStudyShared";
+import { CaseStudyNav, ExploreCaseStudies, SectionIntro, BodyText, CaseImage, StatStrip } from "./CaseStudyShared";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 import postpilotCompetitiveAnalysis from "../../assets/postpilot/postpilot-competitive-analysis.webp";
 import postpilotFeatureComparison from "../../assets/postpilot/postpilot-feature-comparison.webp";
@@ -12,27 +11,6 @@ import KeyFindingsCollage from "./KeyFindingsCollage";
 import PersonaExpandCards from "./PersonaExpandCards";
 import ProductScreensCollage from "./ProductScreensCollage";
 import AnalyticsScreensCollage from "./AnalyticsScreensCollage";
-
-function SectionIntro({ eyebrow, heading }: { eyebrow: string; heading: string }) {
-  return (
-    <>
-      <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-4">{eyebrow}</p>
-      <h2 className="font-serif font-normal text-4xl text-navy mb-4">{heading}</h2>
-    </>
-  );
-}
-
-function BodyText({ children }: { children: ReactNode }) {
-  return <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>;
-}
-
-function CaseImage({ src, alt }: { src: string; alt: string }) {
-  return (
-    <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-      <img src={src} alt={alt} className="w-full h-auto border border-line rounded-[12px]" />
-    </figure>
-  );
-}
 
 function ImagePlaceholder({ label, wide = false }: { label: string; wide?: boolean }) {
   return (
@@ -47,27 +25,6 @@ function ImagePlaceholder({ label, wide = false }: { label: string; wide?: boole
         </span>
       </div>
     </figure>
-  );
-}
-
-function StatStrip({
-  stats,
-}: {
-  stats: { value: string; label: string }[];
-}) {
-  return (
-    <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {stats.map((stat) => (
-          <div key={stat.label}>
-            <p className="text-navy text-4xl md:text-5xl leading-none mb-2" style={{ fontWeight: 700 }}>
-              {stat.value}
-            </p>
-            <p className="text-muted-text text-sm leading-relaxed">{stat.label}</p>
-          </div>
-        ))}
-      </div>
-    </div>
   );
 }
 

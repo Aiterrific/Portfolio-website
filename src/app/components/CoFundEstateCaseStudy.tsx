@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { CASE_STUDY_WIDTH, CASE_STUDY_BODY_TEXT } from "../data/caseStudyStyles";
 import Footer from "./Footer";
 import ScrollingScreenshot from "./ScrollingScreenshot";
@@ -19,103 +18,75 @@ import PrototypeWalkthrough from "./PrototypeWalkthrough";
 import SketchesWireframes from "./SketchesWireframes";
 import {
   CaseStudyNav,
-  SectionHeading,
+  SectionIntro,
+  BodyText,
   Lead,
   ExploreCaseStudies,
 } from "./CaseStudyShared";
-
-function ImagePlaceholder({ label, wide = false, full = false }: { label: string; wide?: boolean; full?: boolean }) {
-  return (
-    <figure className={full ? "w-full mt-8" : `${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-      <div
-        role="img"
-        aria-label={`Placeholder image: ${label}`}
-        className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-navy rounded-md flex items-center justify-center px-6`}
-      >
-        <span className="text-xs md:text-sm uppercase tracking-wide text-white/80 text-center">
-          {label}
-        </span>
-      </div>
-    </figure>
-  );
-}
-
-function BodyText({ children }: { children: ReactNode }) {
-  return <div className={`justify-body space-y-5 ${CASE_STUDY_BODY_TEXT}`}>{children}</div>;
-}
 
 export default function CoFundEstateCaseStudy() {
   return (
     <div className="min-h-screen bg-white text-charcoal">
       <CaseStudyNav />
 
-      {/* ── HERO ── */}
-      <section className="pb-4 md:pb-8">
-        <div className="w-full mt-8">
-          <ScrollingScreenshot
-            src={landingFull}
-            alt="CoFundEstate landing page, full scroll preview"
-            label="cofundestate.ca"
-          />
-        </div>
-        <div className={`${CASE_STUDY_WIDTH} mx-auto pt-10 md:pt-12`}>
+      {/* ── HERO IMAGE ── */}
+      <div className="w-full mt-8">
+        <ScrollingScreenshot
+          src={landingFull}
+          alt="CoFundEstate landing page, full scroll preview"
+          label="cofundestate.ca"
+        />
+      </div>
+
+      {/* ── INTRO ── */}
+      <section className="pt-10 md:pt-12 pb-12 md:pb-16">
+        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
+          <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-muted-text font-heading mb-4">
+            Case Study
+          </p>
           <h1 className="font-serif font-normal text-navy text-4xl md:text-5xl leading-tight mb-3">
             CoFundEstate
           </h1>
-          <p className="text-muted-text text-lg md:text-xl">
+          <p className="text-muted-text text-lg md:text-xl mb-6">
             Making real estate investment accessible through crowdfunding.
           </p>
-        </div>
-      </section>
+          <p className={`justify-body ${CASE_STUDY_BODY_TEXT} mb-10`}>
+            CoFundEstate is a real estate crowdfunding platform that lets everyday professionals pool
+            funds and co-invest in real estate, removing the capital barrier that keeps most people out of
+            property investment. Built as a startup validation MVP during my time at SkillHat, the
+            project moved from market research through product strategy, information architecture
+            and a high-fidelity prototype.
+          </p>
 
-      {/* ── 01 OVERVIEW AND ROLE ── */}
-      <section className="py-12 md:py-16 border-t border-line">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="01">Overview and Role</SectionHeading>
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+          <dl className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 border-t border-line">
             <div>
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-text font-heading mb-4">Overview</h3>
-              <p className={`justify-body ${CASE_STUDY_BODY_TEXT}`}>
-                CoFundEstate is a real estate crowdfunding platform that lets everyday professionals pool
-                funds and co-invest in real estate, removing the capital barrier that keeps most people out of
-                property investment. Built as a startup validation MVP during my time at SkillHat, the
-                project moved from market research through product strategy, information architecture
-                and a high-fidelity prototype.
-              </p>
+              <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Role</dt>
+              <dd className="text-charcoal">Product Designer</dd>
             </div>
             <div>
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-text font-heading mb-4">Role</h3>
-              <dl className="space-y-4">
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted-text font-heading mb-0.5">Role</dt>
-                  <dd className="text-charcoal">Product Designer</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted-text font-heading mb-0.5">Industry</dt>
-                  <dd className="text-charcoal">PropTech / FinTech</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted-text font-heading mb-0.5">Company</dt>
-                  <dd className="text-charcoal">SkillHat (startup project)</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted-text font-heading mb-0.5">Team</dt>
-                  <dd className="text-charcoal">Team 7</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted-text font-heading mb-0.5">Timeline</dt>
-                  <dd className="text-charcoal">May 2024 to November 2024</dd>
-                </div>
-              </dl>
+              <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Industry</dt>
+              <dd className="text-charcoal">PropTech / FinTech</dd>
             </div>
-          </div>
+            <div>
+              <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Company</dt>
+              <dd className="text-charcoal">SkillHat (startup project)</dd>
+            </div>
+            <div>
+              <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Team</dt>
+              <dd className="text-charcoal">Team 7</dd>
+            </div>
+            <div>
+              <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Timeline</dt>
+              <dd className="text-charcoal">May 2024 to November 2024</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       {/* ── 02 BACKGROUND ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="02">Background</SectionHeading>
+          <SectionIntro eyebrow="02" heading="Background" />
           <BodyText>
             <p>
               CoFundEstate was a startup project I worked on as a Product Designer at SkillHat, built
@@ -138,7 +109,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 04 UNDERSTANDING THE PROBLEM ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="04">Understanding the Problem</SectionHeading>
+          <SectionIntro eyebrow="04" heading="Understanding the Problem" />
           <BodyText>
             <p>
               The business opportunity statement framed it plainly: improve the experience for
@@ -163,7 +134,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 05 GATHERING INSIGHTS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="05">Gathering Insights</SectionHeading>
+          <SectionIntro eyebrow="05" heading="Gathering Insights" />
           <BodyText>
             <p>
               A quantitative survey validated the problem and shaped the product. The survey sampled
@@ -221,7 +192,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 06 PRIORITISATION AND STRATEGIC SCOPE ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="06">Prioritisation and Strategic Scope</SectionHeading>
+          <SectionIntro eyebrow="06" heading="Prioritisation and Strategic Scope" />
           <BodyText>
             <p>
               This is the decision that shaped the product. The original vision tried to own the entire
@@ -261,7 +232,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 07 NARROWING THE SCOPE ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="07">Narrowing the Scope</SectionHeading>
+          <SectionIntro eyebrow="07" heading="Narrowing the Scope" />
           <BodyText>
             <p>
               With the transaction layer deferred, the MVP resolved to four jobs, each traceable to a
@@ -292,7 +263,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 08 WIREFRAMING THE SOLUTION ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="08">Wireframing the Solution</SectionHeading>
+          <SectionIntro eyebrow="08" heading="Wireframing the Solution" />
           <BodyText>
             <p>
               Information architecture and user flows came first, separating the exploration mindset
@@ -310,12 +281,15 @@ export default function CoFundEstateCaseStudy() {
       {/* ── EARLY EXPLORATION: SKETCHES AND WIREFRAMES ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-text mb-4">Early exploration</p>
-          <h2 className="font-serif font-normal text-4xl text-navy mb-4">From sketch to screen</h2>
-          <p className="text-muted-text text-lg mb-8">
-            Before any pixels, the core flows were worked out on paper, then translated into greyscale
-            wireframes.
-          </p>
+          <SectionIntro eyebrow="Early exploration" heading="From sketch to screen" />
+          <BodyText>
+            <p>
+              Before any pixels, the core flows were worked out on paper, then translated into greyscale
+              wireframes.
+            </p>
+          </BodyText>
+        </div>
+        <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <SketchesWireframes />
         </div>
       </section>
@@ -323,7 +297,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 09 THE SOLUTION AND DESIGN DECISIONS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="09">The Solution and Design Decisions</SectionHeading>
+          <SectionIntro eyebrow="09" heading="The Solution and Design Decisions" />
           <BodyText>
             <p>Every decision traces to a finding. This is the how and why behind the product.</p>
             <Lead lead="Risk profiling as a matching layer, not a gate.">
@@ -421,7 +395,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 10 VALIDATING THE DESIGNS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="10">Validating the Designs</SectionHeading>
+          <SectionIntro eyebrow="10" heading="Validating the Designs" />
           <BodyText>
             <p>
               Validation ran through moderated walkthrough sessions on the prototype, gathering
@@ -441,7 +415,7 @@ export default function CoFundEstateCaseStudy() {
       {/* ── 11 RESULTS AND TAKEAWAYS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionHeading number="11">Results and Takeaways</SectionHeading>
+          <SectionIntro eyebrow="11" heading="Results and Takeaways" />
           <BodyText>
             <p>
               The prototype validated the core hypothesis: middle-income professionals will complete a

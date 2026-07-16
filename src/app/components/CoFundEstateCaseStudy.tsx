@@ -76,8 +76,8 @@ export default function CoFundEstateCaseStudy() {
             <div>
               <h3 className="text-xs uppercase tracking-[0.2em] text-muted-text font-heading mb-4">Overview</h3>
               <p className={`justify-body ${CASE_STUDY_BODY_TEXT}`}>
-                CoFundEstate is a web platform concept that lets everyday professionals pool funds and
-                co-invest in real estate, removing the capital barrier that keeps most people out of
+                CoFundEstate is a real estate crowdfunding platform that lets everyday professionals pool
+                funds and co-invest in real estate, removing the capital barrier that keeps most people out of
                 property investment. Built as a startup validation MVP during my time at SkillHat, the
                 project moved from market research through product strategy, information architecture
                 and a high-fidelity prototype.

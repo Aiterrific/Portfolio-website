@@ -69,11 +69,11 @@ export default function CoFundEstateCaseStudy() {
             </div>
             <div>
               <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Company</dt>
-              <dd className="text-charcoal">SkillHat (startup project)</dd>
+              <dd className="text-charcoal">SkillHat, for an early-stage PropTech startup</dd>
             </div>
             <div>
               <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Team</dt>
-              <dd className="text-charcoal">Team 7</dd>
+              <dd className="text-charcoal">2 designers</dd>
             </div>
             <div>
               <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Timeline</dt>
@@ -83,14 +83,14 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 02 BACKGROUND ── */}
+      {/* ── 01 BACKGROUND ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="02" heading="Background" />
+          <SectionIntro eyebrow="01" heading="Background" />
           <BodyText>
             <p>
               CoFundEstate was a startup project I worked on as a Product Designer at SkillHat, built
-              with the Team 7 group. Real estate investment carries a high capital barrier, and the
+              with a team of two designers. Real estate investment carries a high capital barrier, and the
               project set out to test whether a crowdfunding model could lower that barrier enough for
               middle-income professionals to participate. My job was to turn the research into a product
               people could actually use, from the first insight to the final prototype.
@@ -106,10 +106,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 04 UNDERSTANDING THE PROBLEM ── */}
+      {/* ── 02 UNDERSTANDING THE PROBLEM ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="04" heading="Understanding the Problem" />
+          <SectionIntro eyebrow="02" heading="Understanding the Problem" />
           <BodyText>
             <p>
               The business opportunity statement framed it plainly: improve the experience for
@@ -119,7 +119,7 @@ export default function CoFundEstateCaseStudy() {
               knowledge.
             </p>
             <p>
-              Two personas grounded the work. Olu Andre, 32, a data analyst in Dallas, high
+              Two personas grounded the work. Olu Andre, 32, a data analyst in Toronto, high
               risk-aversion, wants safe passive income and guided advice. Nadia Lee, 52, an entrepreneur
               in Ottawa, prior investment experience, wants long-term wealth at moderate risk. Different
               ages, different risk appetites, one shared frustration: no accessible, trustworthy way in.
@@ -131,13 +131,13 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 05 GATHERING INSIGHTS ── */}
+      {/* ── 03 GATHERING INSIGHTS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="05" heading="Gathering Insights" />
+          <SectionIntro eyebrow="03" heading="Gathering Insights" />
           <BodyText>
             <p>
-              A quantitative survey validated the problem and shaped the product. The survey sampled
+              A quantitative survey (n=73 respondents) validated the problem and shaped the product. The survey sampled
               internationally, which validated crowdfunding demand broadly, while the product focused on
               the North American market where the opportunity was strongest.
             </p>
@@ -189,10 +189,10 @@ export default function CoFundEstateCaseStudy() {
         </figure>
       </section>
 
-      {/* ── 06 PRIORITISATION AND STRATEGIC SCOPE ── */}
+      {/* ── 04 PRIORITISATION AND STRATEGIC SCOPE ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="06" heading="Prioritisation and Strategic Scope" />
+          <SectionIntro eyebrow="04" heading="Prioritisation and Strategic Scope" />
           <BodyText>
             <p>
               This is the decision that shaped the product. The original vision tried to own the entire
@@ -229,10 +229,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 07 NARROWING THE SCOPE ── */}
+      {/* ── 05 NARROWING THE SCOPE ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="07" heading="Narrowing the Scope" />
+          <SectionIntro eyebrow="05" heading="Narrowing the Scope" />
           <BodyText>
             <p>
               With the transaction layer deferred, the MVP resolved to four jobs, each traceable to a
@@ -260,10 +260,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 08 WIREFRAMING THE SOLUTION ── */}
+      {/* ── 06 WIREFRAMING THE SOLUTION ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="08" heading="Wireframing the Solution" />
+          <SectionIntro eyebrow="06" heading="Wireframing the Solution" />
           <BodyText>
             <p>
               Information architecture and user flows came first, separating the exploration mindset
@@ -294,10 +294,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 09 THE SOLUTION AND DESIGN DECISIONS ── */}
+      {/* ── 07 THE SOLUTION AND DESIGN DECISIONS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="09" heading="The Solution and Design Decisions" />
+          <SectionIntro eyebrow="07" heading="The Solution and Design Decisions" />
           <BodyText>
             <p>Every decision traces to a finding. This is the how and why behind the product.</p>
             <Lead lead="Risk profiling as a matching layer, not a gate.">
@@ -392,10 +392,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 10 VALIDATING THE DESIGNS ── */}
+      {/* ── 08 VALIDATING THE DESIGNS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="10" heading="Validating the Designs" />
+          <SectionIntro eyebrow="08" heading="Validating the Designs" />
           <BodyText>
             <p>
               Validation ran through moderated walkthrough sessions on the prototype, gathering
@@ -412,10 +412,10 @@ export default function CoFundEstateCaseStudy() {
         </div>
       </section>
 
-      {/* ── 11 RESULTS AND TAKEAWAYS ── */}
+      {/* ── 09 RESULTS AND TAKEAWAYS ── */}
       <section className="py-12 md:py-16 border-t border-line">
         <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="11" heading="Results and Takeaways" />
+          <SectionIntro eyebrow="09" heading="Results and Takeaways" />
           <BodyText>
             <p>
               The prototype validated the core hypothesis: middle-income professionals will complete a

@@ -12,22 +12,6 @@ import PersonaExpandCards from "./PersonaExpandCards";
 import ProductScreensCollage from "./ProductScreensCollage";
 import AnalyticsScreensCollage from "./AnalyticsScreensCollage";
 
-function ImagePlaceholder({ label, wide = false }: { label: string; wide?: boolean }) {
-  return (
-    <figure className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
-      <div
-        role="img"
-        aria-label={`Placeholder image: ${label}`}
-        className={`w-full ${wide ? "aspect-[21/9]" : "aspect-video"} bg-navy rounded-md flex items-center justify-center px-6`}
-      >
-        <span className="text-xs md:text-sm uppercase tracking-wide text-white/80 text-center">
-          {label}
-        </span>
-      </div>
-    </figure>
-  );
-}
-
 export default function PostPilotCaseStudy() {
   return (
     <div className="min-h-screen bg-white text-charcoal">
@@ -266,14 +250,6 @@ export default function PostPilotCaseStudy() {
             trends in one place.
           </p>
         </div>
-      </section>
-
-      {/* ── VALIDATION ── */}
-      <section className="py-12 md:py-16 border-t border-line">
-        <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-          <SectionIntro eyebrow="Validation" heading="Testing the flows" />
-        </div>
-        <ImagePlaceholder label="Testing results — data pending" />
       </section>
 
       {/* ── REFLECTION ── */}

@@ -92,12 +92,14 @@ export function StatStrip({ stats }: { stats: { value: string; label: string }[]
   );
 }
 
-export function SectionHeading({ number, children }: { number: string; children: ReactNode }) {
+export function SectionHeading({ number, children }: { number?: string; children: ReactNode }) {
   return (
     <h2 className="flex items-baseline gap-3 mb-6 md:mb-8">
-      <span className="text-xs tracking-[0.2em] text-muted-text font-heading" aria-hidden="true">
-        {number}
-      </span>
+      {number && (
+        <span className="text-xs tracking-[0.2em] text-muted-text font-heading" aria-hidden="true">
+          {number}
+        </span>
+      )}
       <span className={CASE_STUDY_HEADING_LABEL}>{children}</span>
     </h2>
   );
@@ -157,7 +159,7 @@ export function ExploreCaseStudies({ currentTitle }: { currentTitle: string }) {
   return (
     <section className="py-12 md:py-16 border-t border-line">
       <div className={`${CASE_STUDY_WIDTH} mx-auto`}>
-        <SectionHeading number="14">Explore Case Studies</SectionHeading>
+        <SectionHeading>Explore Case Studies</SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
           {otherProjects.map((project) => {
             const hasRealImage = !project.img.startsWith("http");

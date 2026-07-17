@@ -18,10 +18,10 @@ const WORK_ITEMS = [
     imgPosition: "object-top",
   },
   {
-    title: "ConnectLocaly",
+    title: "ConnectLocally",
     headline: "Helping 50+ Local Businesses Get Found: A Mobile Platform Redesign",
     tags: ["UX Research", "Information Architecture", "UI Design"],
-    path: "/case-studies/connectlocaly",
+    path: "/case-studies/connectlocally",
     tintBg: "bg-[#ECEBF7]",
     primaryClass: "text-teal",
   },

@@ -140,7 +140,7 @@ export default function PostPilotCaseStudy() {
         <div className={`${CASE_STUDY_WIDTH} mx-auto mt-8`}>
           <KeyFindingsCollage />
           <p className="text-sm text-muted-text text-center mt-3">
-            Key survey findings — satisfaction drivers, preferences, top rated features and user concerns.
+            Key survey findings — satisfaction drivers, top rated features and user concerns.
           </p>
         </div>
       </section>
@@ -284,7 +284,7 @@ export default function PostPilotCaseStudy() {
             <p>
               Owning one slice of a team build taught me a different discipline than owning everything. My
               flows had to click into screens I did not design, follow tokens I did not set, and serve
-              personas the whole team shared. The messaging experience shipped stronger for those
+              personas the whole team shared. The messaging experience held up stronger for those
               constraints: shared foundations forced clarity about which decisions were mine to make and
               which were mine to align with.
             </p>

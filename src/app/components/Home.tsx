@@ -13,10 +13,10 @@ const SELECTED_WORK = [
     description: "CoFundEstate is a web-based crowdfunding platform built to make fractional real estate investing understandable for first-time investors. I led end-to-end product design on an early-stage validation MVP, from research through developer handoff.",
   },
   {
-    title: "ConnectLocaly",
+    title: "ConnectLocally",
     outcome: "Made a two-sided local marketplace usable when no real inventory existed yet, using structure over browsing.",
     tags: ["Local Services", "Community"],
-    description: "ConnectLocaly is a two-sided platform concept linking community members with local businesses. I led end-to-end product design for a startup initiative at SkillHat, from research framing through prototyping, walkthrough testing and feasibility handoff.",
+    description: "ConnectLocally is a two-sided platform concept linking community members with local businesses. I led end-to-end product design for a startup initiative at SkillHat, from research framing through prototyping, walkthrough testing and feasibility handoff.",
   },
   {
     title: "Batchly",

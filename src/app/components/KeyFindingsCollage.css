@@ -1,4 +1,4 @@
-/* KeyFindingsCollage — four survey panels lapping alternately left and
+/* KeyFindingsCollage — three survey panels lapping alternately left and
    right inside one card frame. Colours drawn from the site's global
    design tokens (src/styles/theme.css). */
 
@@ -30,11 +30,6 @@
 .kfc-a {
   margin: 0 auto 0 0;
   transform: rotate(-1deg);
-}
-
-.kfc-b {
-  margin: -8% 0 0 auto;
-  transform: rotate(1.2deg);
 }
 
 .kfc-c {

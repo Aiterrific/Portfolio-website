@@ -10,7 +10,7 @@ import {
   ExploreCaseStudies,
 } from "./CaseStudyShared";
 
-export default function ConnectLocalyCaseStudy() {
+export default function ConnectLocallyCaseStudy() {
   return (
     <div className="min-h-screen bg-white text-charcoal">
       <CaseStudyNav />
@@ -23,10 +23,10 @@ export default function ConnectLocalyCaseStudy() {
               Case Study
             </p>
             <h1 className="text-navy text-3xl md:text-4xl leading-tight mb-6">
-              ConnectLocaly: Connecting Communities to Trusted Local Businesses
+              ConnectLocally: Connecting Communities to Trusted Local Businesses
             </h1>
             <p className={`justify-body ${CASE_STUDY_BODY_TEXT}`}>
-              ConnectLocaly is a two-sided platform concept linking community members with local
+              ConnectLocally is a two-sided platform concept linking community members with local
               businesses. I led end-to-end product design for a startup initiative at SkillHat, from
               research framing through prototyping, walkthrough testing and feasibility handoff.
             </p>
@@ -60,7 +60,7 @@ export default function ConnectLocalyCaseStudy() {
       {/* ── 01 CONTEXT ── */}
       <Section number="01" title="Context">
         <p>
-          ConnectLocaly set out to serve two audiences at once. Small businesses needed affordable
+          ConnectLocally set out to serve two audiences at once. Small businesses needed affordable
           digital visibility. Community members needed a trusted way to find local services. The
           project ran as a concept-stage validation effort for a startup at SkillHat, built to test
           demand before any production investment. I owned product design end to end: research framing,
@@ -333,7 +333,7 @@ export default function ConnectLocalyCaseStudy() {
         </Lead>
       </Section>
 
-      <ExploreCaseStudies currentTitle="ConnectLocaly" />
+      <ExploreCaseStudies currentTitle="ConnectLocally" />
 
       <Footer />
     </div>

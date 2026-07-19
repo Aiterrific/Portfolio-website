@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import WorkPage from "./components/WorkPage";
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/case-studies/batchly" element={<BatchlyCaseStudy />} />
         <Route path="/case-studies/postpilot" element={<PostPilotCaseStudy />} />
       </Routes>
+      <Analytics />
     </>
   );
 }

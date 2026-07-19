@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import SiteHeader from "./SiteHeader";
 import batchlyComingSoon from "../../assets/batchly/batchly-coming-soon.webp";
 import cofundestateCard from "../../assets/cofundestate/cofundestate-card.webp";
+import connectlocalyCard from "../../assets/connectlocaly/hero-landing-page.png";
 import postpilotHero from "../../assets/postpilot/postpilot-hero.webp";
 
 const WORK_ITEMS = [
@@ -18,12 +19,15 @@ const WORK_ITEMS = [
     imgPosition: "object-top",
   },
   {
-    title: "ConnectLocally",
+    title: "ConnectLocaly",
     headline: "Helping 50+ Local Businesses Get Found: A Mobile Platform Redesign",
     tags: ["UX Research", "Information Architecture", "UI Design"],
-    path: "/case-studies/connectlocally",
+    path: "/case-studies/connectlocaly",
     tintBg: "bg-[#ECEBF7]",
     primaryClass: "text-teal",
+    img: connectlocalyCard,
+    alt: "ConnectLocaly landing page, full scroll preview",
+    imgPosition: "object-center",
   },
   {
     title: "Batchly",

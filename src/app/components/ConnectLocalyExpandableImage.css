@@ -1,0 +1,100 @@
+/* ConnectLocalyExpandableImage — single dense diagram/board image with lightbox.
+   Colours below are drawn from the site's global design tokens (src/styles/theme.css). */
+
+.clei-item {
+  --clei-navy: var(--navy);
+  --clei-accent: var(--gold);
+  --clei-muted: var(--muted-text);
+  --clei-border: rgba(11, 37, 69, 0.1);
+
+  margin: 0;
+}
+
+.clei-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--clei-border);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.clei-trigger:focus-visible {
+  outline: 3px solid var(--clei-accent);
+  outline-offset: 2px;
+}
+
+.clei-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.clei-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--clei-navy);
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.clei-trigger:hover .clei-hint,
+.clei-trigger:focus-visible .clei-hint {
+  opacity: 1;
+}
+
+.clei-caption {
+  margin-top: 12px;
+  color: var(--clei-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Lightbox */
+
+.clei-dialog {
+  width: min(96vw, 1600px);
+  max-height: 92vh;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.clei-dialog::backdrop {
+  background: rgba(11, 37, 69, 0.7);
+}
+
+.clei-full {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(92vh - 90px);
+  object-fit: contain;
+}
+
+.clei-close {
+  display: block;
+  margin: 14px 0 0 auto;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--clei-navy);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clei-close:focus-visible {
+  outline: 3px solid var(--clei-accent);
+  outline-offset: 2px;
+}

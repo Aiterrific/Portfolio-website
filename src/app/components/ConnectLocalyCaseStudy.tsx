@@ -100,7 +100,7 @@ export default function ConnectLocalyCaseStudy() {
             </div>
             <div>
               <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Timeline</dt>
-              <dd className="text-charcoal">March to June 2024</dd>
+              <dd className="text-charcoal">March to November 2024</dd>
             </div>
           </dl>
         </div>

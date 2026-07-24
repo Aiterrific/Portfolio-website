@@ -77,7 +77,7 @@ export default function CoFundEstateCaseStudy() {
             </div>
             <div>
               <dt className="text-xs tracking-wide uppercase text-muted-text mb-1 font-heading">Timeline</dt>
-              <dd className="text-charcoal">May 2024 to November 2024</dd>
+              <dd className="text-charcoal">December 2024 to March 2026</dd>
             </div>
           </dl>
         </div>
